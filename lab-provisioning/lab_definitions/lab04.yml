@@ -2,13 +2,13 @@
 CVP_DEVICES:
   TEAM01-SPINE1:
     name: TEAM01-SPINE1
-    parentContainerName: TEAM01
+    parentContainerName: STAGING
     configlets:
         - TEAM01-SPINE1
     imageBundle: []
 
 CVP_CONTAINERS:
-  TEAM01:
+  STAGING:
     parent_container: Tenant
 
 CVP_CONFIGLETS:

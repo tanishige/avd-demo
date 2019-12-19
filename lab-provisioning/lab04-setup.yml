@@ -1,21 +1,21 @@
 ---
-- name: Build lab02 on CloudVision
+- name: Build lab04 on CloudVision
   hosts: CloudVision
   gather_facts: no
   tasks:
     - name: Load local variables from file
       include_vars:
-        file: lab_definitions/lab02.yml
+        file: lab_definitions/lab04.yml
 
     - name: 'Collecting facts from CVP {{inventory_hostname}}.'
       arista.cvp.cv_facts:
       register: CVP_FACTS
 
-    - name: 'Configure configlets for lab02'
+    - name: 'Configure configlets for lab04'
       arista.cvp.cv_configlet:
         cvp_facts: "{{CVP_FACTS.ansible_facts}}"
         configlets: "{{CVP_CONFIGLETS}}"
-        configlet_filter: ['TEAM']
+        configlet_filter: ['TEAM','GLOBAL']
 
     - name: "Building Containers topology on {{inventory_hostname}}"
       arista.cvp.cv_container:
