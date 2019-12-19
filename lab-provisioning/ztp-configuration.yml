@@ -1,0 +1,8 @@
+---
+- name: Configure ZTP service on CloudVision
+  hosts: ZTP
+  gather_facts: no
+  tasks:
+  - name: 'Execute ZTP configuration role'
+    import_role:
+      name: ztp-setup

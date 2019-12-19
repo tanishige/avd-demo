@@ -1,0 +1,4 @@
+---
+CVP_CONFIGLETS:
+  TEAM01-alias: "alias a{{ 999 | random }} show version"
+  TEAM01-another-configlet: "alias a{{ 999 | random }} show version"
