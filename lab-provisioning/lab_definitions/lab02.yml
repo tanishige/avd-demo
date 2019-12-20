@@ -9,7 +9,7 @@ CVP_DEVICES:
 
 CVP_CONTAINERS:
   TEAM01:
-    parentContainerName: Tenant
+    parent_container: Tenant
 
 CVP_CONFIGLETS:
   GLOBAL-aliases: "{{ lookup('file', 'eos_configs/common.cfg') }}"

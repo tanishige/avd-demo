@@ -11,7 +11,7 @@
       arista.cvp.cv_facts:
       register: CVP_FACTS
 
-    - name: "Configure devices on {{inventory_hostname}}"
+    - name: "Reset devices on {{inventory_hostname}}"
       arista.cvp.cv_device:
         devices: "{{CVP_DEVICES}}"
         cvp_facts: '{{CVP_FACTS.ansible_facts}}'
@@ -28,14 +28,14 @@
       arista.cvp.cv_facts:
       register: CVP_FACTS
 
-    - name: 'Configure configlets for lab02'
+    - name: 'Cleanup configlets'
       arista.cvp.cv_configlet:
         cvp_facts: "{{CVP_FACTS.ansible_facts}}"
         configlets: "{{CVP_CONFIGLETS}}"
         configlet_filter: ['TEAM', 'GLOBAL']
         state: absent
 
-    - name: "Building Containers topology on {{inventory_hostname}}"
+    - name: "Cleanup containers"
       arista.cvp.cv_container:
         topology: '{{CVP_CONTAINERS}}'
         cvp_facts: '{{CVP_FACTS.ansible_facts}}'

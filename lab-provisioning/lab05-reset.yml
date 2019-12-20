@@ -5,7 +5,7 @@
   tasks:
     - name: Load local variables from file
       include_vars:
-        file: lab_definitions/lab02.yml
+        file: lab_definitions/lab05.yml
 
     - name: 'Collecting facts from CVP {{inventory_hostname}}.'
       arista.cvp.cv_facts:
