@@ -40,9 +40,41 @@ This repository is part of `arista.cvp` ansible collection and provides lab mate
         └── group_vars
 ```
 
+List of labs available:
+
+- Lab 01: Ansible Basics
+- Lab 02: CloudVision Facts
+- Lab 03: Configlets
+- Lab 04: Containers
+- Lab 05: Devices
+
 ## Lab Environment
 
 TBD
+
+## Install environment
+
+Run TOI in a python's virtual environment:
+
+__Install venv__
+
+```shell
+# Install virtualenv if not part of your system
+$ python -m pip install virtualenv
+
+# Create a virtual env named .venv
+$ virtualenv --no-site-packages -p $(which python2.7) .venv
+
+# Activate virtualenv
+$ source .venv/bin/activate
+```
+
+__Install Ansible__
+
+```shell
+$ pip install ansible==2.9
+```
+
 
 ## TOI preparation
 
@@ -78,3 +110,4 @@ $ cd lab-provisioning
 # Run playbook
 $ ansible-playbook ztp-configuration.yml
 ```
+

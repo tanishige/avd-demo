@@ -1,0 +1,36 @@
+---
+CVP_DEVICES:
+  STUDENT_DEVICE:
+    name: STUDENT_DEVICE
+    parentContainerName: TEAM01
+    configlets:
+        - STUDENT_DEVICE
+    imageBundle: []
+  TEAM02-device02:
+    name: TEAM02-device02
+    parentContainerName: TEAM02
+    configlets:
+        - TEAM02-device02
+    imageBundle: []
+  TEAM02-device03:
+    name: TEAM02-device03
+    parentContainerName: TEAM02
+    configlets:
+        - TEAM02-device03
+    imageBundle: []
+  TEAM03-device04:
+    name: TEAM03-device04
+    parentContainerName: TEAM03
+    configlets:
+        - TEAM03-device04
+    imageBundle: []
+
+CVP_CONTAINERS:
+  STAGING:
+    parent_container: Tenant
+  TEAM01_DC:
+    parent_container: Tenant
+  TEAM02_DC:
+    parent_container: Tenant
+  TEAM03_DC:
+    parent_container: Tenant

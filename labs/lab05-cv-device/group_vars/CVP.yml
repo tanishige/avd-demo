@@ -1,0 +1,22 @@
+---
+# CVP_CONFIGLETS:
+#   STUDENT_DEVICE-alias: "alias a{{ 999 | random }} show version"
+#   STUDENT_DEVICE-another-configlet: "alias a{{ 999 | random }} show version"
+
+CVP_DEVICES:
+  STUDENT_DEVICE-SPINE1:
+    name: STUDENT_DEVICE-SPINE1
+    parentContainerName: STUDENT_DEVICE_DC
+    configlets:
+        - STUDENT_DEVICE-SPINE1
+    imageBundle: []  # Not yet supported
+
+# CVP_CONTAINERS:
+#   STUDENT_DEVICE:
+#     parent_container: Tenant
+#   STUDENT_DEVICE_DC:
+#     parent_container: STUDENT_DEVICE
+#   STUDENT_DEVICE_LEAFS:
+#     parent_container: STUDENT_DEVICE_DC
+#   STUDENT_DEVICE_SPINES:
+#     parent_container: STUDENT_DEVICE_DC

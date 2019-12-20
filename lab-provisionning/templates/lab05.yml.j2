@@ -1,0 +1,18 @@
+---
+CVP_DEVICES:
+{% for item in ztp.clients %}
+  {{item.group}}{{delimiter}}{{ item.name }}:
+    name: {{item.group}}{{delimiter}}{{ item.name }}
+    parentContainerName: {{ item.group }}
+    configlets:
+        - {{item.group}}{{delimiter}}{{ item.name }}
+    imageBundle: []
+{% endfor %}
+
+CVP_CONTAINERS:
+  STAGING:
+    parent_container: Tenant
+{% for item in ztp.groupAttendees %}
+  {{ item }}_DC:
+    parent_container: Tenant
+{% endfor %}
