@@ -9,10 +9,11 @@ This repository is part of `arista.cvp` ansible collection and provides lab mate
 __List of available labs:__
 
 - _Lab 01_: [Ansible Basics](labs/lab01-ansible-basics)
-- _Lab 02_: [CloudVision Facts](labs/lab02-arista.cvp-overview)
+- _Lab 02_: [CloudVision Collection overview](labs/lab02-arista.cvp-overview)
 - _Lab 03_: [Configlets](labs/lab03-cv-configlets)
 - _Lab 04_: [Containers](labs/lab04-cv-containers)
-- _Lab 05_: [Devices](labs/lab05-cv-tasks)
+- _Lab 05_: [Devices](labs/lab05-cv-device)
+- _Lab 06_: [Tasks](labs/lab05-cv-tasks)
 
 <p align="center">
   <img src='imgs/cv_ansible_logo.png' alt='Arista CloudVision and Ansible'/>
