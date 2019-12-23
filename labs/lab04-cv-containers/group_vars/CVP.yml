@@ -8,6 +8,8 @@ CVP_CONTAINERS:
     parent_container: Tenant
   STUDENT_DEVICE_DC:
     parent_container: STUDENT_DEVICE
+    configlets:
+      - 'GLOBAL-ALIASES'
   STUDENT_DEVICE_LEAFS:
     parent_container: STUDENT_DEVICE_DC
   STUDENT_DEVICE_SPINES:

@@ -1,0 +1,19 @@
+---
+CVP_DEVICES:
+{% for item in ztp.clients %}
+  '{{item.group}}{{delimiter}}{{ item.name }}':
+    name: '{{item.group}}{{delimiter}}{{ item.name }}'
+    parentContainerName: 'STAGING'
+    configlets:
+        - '{{item.group}}{{delimiter}}{{ item.name }}'
+    imageBundle: []
+{% endfor %}
+
+CVP_CONTAINERS:
+  STAGING:
+    parent_container: Tenant
+
+
+CVP_CONFIGLETS:
+  GLOBAL-aliases: {% raw %}"{{ lookup('file', 'eos_configs/common.cfg') }}"{% endraw %}
+

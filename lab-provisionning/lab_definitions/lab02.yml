@@ -1,43 +1,18 @@
 ---
 CVP_DEVICES:
-  'STUDENT_DEVICE':
-    name: 'STUDENT_DEVICE'
+  'TEAM01-DEVICE01':
+    name: 'TEAM01-DEVICE01'
     parentContainerName: 'TEAM01'
     configlets:
-        - 'STUDENT_DEVICE'
-    imageBundle: []
-  'TEAM02-device02':
-    name: 'TEAM02-device02'
-    parentContainerName: 'TEAM02'
-    configlets:
-        - 'TEAM02-device02'
-    imageBundle: []
-  'TEAM02-device03':
-    name: 'TEAM02-device03'
-    parentContainerName: 'TEAM02'
-    configlets:
-        - 'TEAM02-device03'
-    imageBundle: []
-  'TEAM03-device04':
-    name: 'TEAM03-device04'
-    parentContainerName: 'TEAM03'
-    configlets:
-        - 'TEAM03-device04'
+        - 'TEAM01-DEVICE01'
     imageBundle: []
 
 CVP_CONTAINERS:
   TEAM01:
     parent_container: Tenant
-  TEAM02:
-    parent_container: Tenant
-  TEAM03:
-    parent_container: Tenant
 
 
 CVP_CONFIGLETS:
   GLOBAL-aliases: "{{ lookup('file', 'eos_configs/common.cfg') }}"
-  STUDENT_DEVICE: "{{ lookup('file', 'eos_configs/base_configs/STUDENT_DEVICE.cfg') }}"
-  TEAM02-device02: "{{ lookup('file', 'eos_configs/base_configs/TEAM02-device02.cfg') }}"
-  TEAM02-device03: "{{ lookup('file', 'eos_configs/base_configs/TEAM02-device03.cfg') }}"
-  TEAM03-device04: "{{ lookup('file', 'eos_configs/base_configs/TEAM03-device04.cfg') }}"
+  TEAM01-DEVICE01: "{{ lookup('file', 'eos_configs/base_configs/TEAM01-DEVICE01.cfg') }}"
 

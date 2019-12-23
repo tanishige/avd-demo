@@ -5,7 +5,7 @@
   tasks:
     - name: Load local variables from file
       include_vars:
-        file: lab_definitions/lab04.yml
+        file: lab_definitions/lab00.yml
 
     - name: 'Collecting facts from CVP {{inventory_hostname}}.'
       arista.cvp.cv_facts:
@@ -18,6 +18,10 @@
         device_filter: ['TEAM']
         state: absent
       register: CVP_DEVICES_RESULTS
+
+    - name: debug
+      debug:
+        msg: '{{CVP_DEVICES_RESULTS}}'
 
     - name: "Execute pending tasks on {{inventory_hostname}}"
       arista.cvp.cv_task:
@@ -32,10 +36,17 @@
       arista.cvp.cv_configlet:
         cvp_facts: "{{CVP_FACTS.ansible_facts}}"
         configlets: "{{CVP_CONFIGLETS}}"
-        configlet_filter: ['TEAM', 'GLOBAL']
+        configlet_filter: ['TEAM', 'GLOBAL','LAB06']
         state: absent
 
     - name: "Cleanup containers"
+      arista.cvp.cv_container:
+        topology: '{{CVP_CONTAINERS}}'
+        cvp_facts: '{{CVP_FACTS.ansible_facts}}'
+        save_topology: true
+        mode: override
+
+    - name: "Delete containers"
       arista.cvp.cv_container:
         topology: '{{CVP_CONTAINERS}}'
         cvp_facts: '{{CVP_FACTS.ansible_facts}}'

@@ -3,14 +3,14 @@
   hosts: ZTP
   gather_facts: no
   tasks:
-    # - name: 'Execute ZTP configuration role'
-    #   import_role:
-    #     name: ztp-setup
+    - name: 'Execute ZTP configuration role'
+      import_role:
+        name: ztp-setup
 
     - name: 'Build EOS Base configuration'
       template:
         src: 'templates/base_eos_template.j2'
-        dest: 'eos_configs/base_configs/{{item.group}}-{{item.name}}.cfg'
+        dest: 'eos_configs/base_configs/{{item.group}}{{delimiter}}{{item.name}}.cfg'
       with_items:
         - '{{ztp.clients}}'
       delegate_to: localhost
@@ -21,6 +21,7 @@
         dest: '{{dirs.lab_definitions}}/{{item}}.yml'
       delegate_to: localhost
       with_items:
+        - 'lab00'
         - 'lab02'
         - 'lab04'
         - 'lab05'

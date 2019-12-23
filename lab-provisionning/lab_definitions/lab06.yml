@@ -1,50 +1,17 @@
 ---
 CVP_DEVICES_INIT:
-  'STUDENT_DEVICE':
-    name: 'STUDENT_DEVICE'
+  'TEAM01-DEVICE01':
+    name: 'TEAM01-DEVICE01'
     parentContainerName: TEAM01
     configlets:
-        - 'STUDENT_DEVICE'
-  'TEAM02-device02':
-    name: 'TEAM02-device02'
-    parentContainerName: TEAM02
-    configlets:
-        - 'TEAM02-device02'
-  'TEAM02-device03':
-    name: 'TEAM02-device03'
-    parentContainerName: TEAM02
-    configlets:
-        - 'TEAM02-device03'
-  'TEAM03-device04':
-    name: 'TEAM03-device04'
-    parentContainerName: TEAM03
-    configlets:
-        - 'TEAM03-device04'
+        - 'TEAM01-DEVICE01'
 
 CVP_DEVICES_TASKER:
-  'STUDENT_DEVICE':
-    name: STUDENT_DEVICE
+  'TEAM01-DEVICE01':
+    name: TEAM01-DEVICE01
     parentContainerName: TEAM01
     configlets:
-        - STUDENT_DEVICE
-        - LAB06-ALIAS
-  'TEAM02-device02':
-    name: TEAM02-device02
-    parentContainerName: TEAM02
-    configlets:
-        - TEAM02-device02
-        - LAB06-ALIAS
-  'TEAM02-device03':
-    name: TEAM02-device03
-    parentContainerName: TEAM02
-    configlets:
-        - TEAM02-device03
-        - LAB06-ALIAS
-  'TEAM03-device04':
-    name: TEAM03-device04
-    parentContainerName: TEAM03
-    configlets:
-        - TEAM03-device04
+        - TEAM01-DEVICE01
         - LAB06-ALIAS
 
 CVP_CONTAINERS:
@@ -52,14 +19,7 @@ CVP_CONTAINERS:
     parent_container: Tenant
   TEAM01:
     parent_container: Tenant
-  TEAM02:
-    parent_container: Tenant
-  TEAM03:
-    parent_container: Tenant
 
 CVP_CONFIGLETS:
   LAB06-ALIAS: "alias a{{ 999 | random }} show version"
-  STUDENT_DEVICE: "{{ lookup('file', 'eos_configs/base_configs/STUDENT_DEVICE.cfg') }}"
-  TEAM02-device02: "{{ lookup('file', 'eos_configs/base_configs/TEAM02-device02.cfg') }}"
-  TEAM02-device03: "{{ lookup('file', 'eos_configs/base_configs/TEAM02-device03.cfg') }}"
-  TEAM03-device04: "{{ lookup('file', 'eos_configs/base_configs/TEAM03-device04.cfg') }}"
+  TEAM01-DEVICE01: "{{ lookup('file', 'eos_configs/base_configs/TEAM01-DEVICE01.cfg') }}"
