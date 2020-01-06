@@ -14,7 +14,6 @@
         cvp_facts: "{{CVP_FACTS.ansible_facts}}"
         topology: "{{CVP_CONTAINERS}}"
         save_topology: true
-        mode: delete
       register: CVP_CONTAINERS_RESULT
 
     - name: 'Display cv_configlet result'

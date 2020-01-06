@@ -5,7 +5,7 @@ DC:
       children:
         DC_SPINES:
           hosts:
-            DC-SPINE1:
+            STUDENT_DEVICE:
             DC-SPINE2:
         DC_L3LEAFS:
           children:

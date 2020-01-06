@@ -1,5 +1,7 @@
 # Lab Management
 
+![](../imgs/lab-topology.png)
+
 ## Provision lab for TOI
 
 __Edit [`group_vars/ZTP/ztp_config.yml`](group_vars/ZTP/ztp_config.yml)__
@@ -91,6 +93,8 @@ Every lab has its own provisionning playbook to configure lab environment:
 - Lab 04 : `lab04-setup.yml`
 - Lab 05 : `lab05-setup.yml`
 - Lab 06 : `lab06-setup.yml`
+
+All labs topology are generated using template saved under [templates](templates) folder.
 
 To completely reset lab, following playbook can be used:
 
