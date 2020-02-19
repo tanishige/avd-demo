@@ -14,7 +14,7 @@ CVP_CONTAINERS:
     parent_container: Tenant
 
 CVP_CONFIGLETS:
-  GLOBAL-aliases: {% raw %}"{{ lookup('file', 'eos_configs/common.cfg') }}"{% endraw %}
+  GLOBAL-ALIASES: {% raw %}"{{ lookup('file', 'eos_configs/common.cfg') }}"{% endraw %}
 
 {% for item in ztp.clients %}
   {{item.group}}{{delimiter}}{{item.name}}: {% raw %}"{{ lookup('file', 'eos_configs/base_configs/{% endraw %}{{item.group}}{{delimiter}}{{item.name}}.cfg'{% raw %}) }}"{% endraw %}

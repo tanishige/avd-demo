@@ -6,23 +6,29 @@ CVP_DEVICES:
     configlets:
         - TEAM01-DEVICE01
     imageBundle: []
-  TEAM02-DEVICE02:
-    name: TEAM02-DEVICE02
+  TEAM02-DEVICE01:
+    name: TEAM02-DEVICE01
     parentContainerName: TEAM02
     configlets:
-        - TEAM02-DEVICE02
+        - TEAM02-DEVICE01
     imageBundle: []
-  TEAM02-DEVICE03:
-    name: TEAM02-DEVICE03
-    parentContainerName: TEAM02
-    configlets:
-        - TEAM02-DEVICE03
-    imageBundle: []
-  TEAM03-DEVICE04:
-    name: TEAM03-DEVICE04
+  TEAM03-DEVICE01:
+    name: TEAM03-DEVICE01
     parentContainerName: TEAM03
     configlets:
-        - TEAM03-DEVICE04
+        - TEAM03-DEVICE01
+    imageBundle: []
+  TEAM04-DEVICE01:
+    name: TEAM04-DEVICE01
+    parentContainerName: TEAM04
+    configlets:
+        - TEAM04-DEVICE01
+    imageBundle: []
+  TEAM05-DEVICE01:
+    name: TEAM05-DEVICE01
+    parentContainerName: TEAM05
+    configlets:
+        - TEAM05-DEVICE01
     imageBundle: []
 
 CVP_CONTAINERS:
@@ -35,4 +41,6 @@ CVP_CONTAINERS:
   TEAM03_DC:
     parent_container: Tenant
   TEAM04_DC:
+    parent_container: Tenant
+  TEAM05_DC:
     parent_container: Tenant

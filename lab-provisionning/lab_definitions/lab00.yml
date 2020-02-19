@@ -6,23 +6,29 @@ CVP_DEVICES:
     configlets:
         - 'TEAM01-DEVICE01'
     imageBundle: []
-  'TEAM02-DEVICE02':
-    name: 'TEAM02-DEVICE02'
+  'TEAM02-DEVICE01':
+    name: 'TEAM02-DEVICE01'
     parentContainerName: 'STAGING'
     configlets:
-        - 'TEAM02-DEVICE02'
+        - 'TEAM02-DEVICE01'
     imageBundle: []
-  'TEAM02-DEVICE03':
-    name: 'TEAM02-DEVICE03'
+  'TEAM03-DEVICE01':
+    name: 'TEAM03-DEVICE01'
     parentContainerName: 'STAGING'
     configlets:
-        - 'TEAM02-DEVICE03'
+        - 'TEAM03-DEVICE01'
     imageBundle: []
-  'TEAM03-DEVICE04':
-    name: 'TEAM03-DEVICE04'
+  'TEAM04-DEVICE01':
+    name: 'TEAM04-DEVICE01'
     parentContainerName: 'STAGING'
     configlets:
-        - 'TEAM03-DEVICE04'
+        - 'TEAM04-DEVICE01'
+    imageBundle: []
+  'TEAM05-DEVICE01':
+    name: 'TEAM05-DEVICE01'
+    parentContainerName: 'STAGING'
+    configlets:
+        - 'TEAM05-DEVICE01'
     imageBundle: []
 
 CVP_CONTAINERS:

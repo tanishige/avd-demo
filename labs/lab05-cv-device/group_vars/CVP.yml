@@ -4,11 +4,11 @@
 #   STUDENT_DEVICE-another-configlet: "alias a{{ 999 | random }} show version"
 
 CVP_DEVICES:
-  STUDENT_DEVICE-SPINE1:
-    name: STUDENT_DEVICE-SPINE1
+  STUDENT_DEVICE:
+    name: STUDENT_DEVICE
     parentContainerName: STUDENT_DEVICE_DC
     configlets:
-        - STUDENT_DEVICE-SPINE1
+        - STUDENT_DEVICE
     imageBundle: []  # Not yet supported
 
 # CVP_CONTAINERS:

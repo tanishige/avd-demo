@@ -6,6 +6,7 @@ CVP_DEVICES_INIT:
     parentContainerName: {{ item.group }}
     configlets:
         - '{{item.group}}{{delimiter}}{{ item.name }}'
+    imageBundle: []
 {% endfor %}
 
 CVP_DEVICES_TASKER:
@@ -16,6 +17,7 @@ CVP_DEVICES_TASKER:
     configlets:
         - {{item.group}}{{delimiter}}{{ item.name }}
         - LAB06-ALIAS
+    imageBundle: []
 {% endfor %}
 
 CVP_CONTAINERS:

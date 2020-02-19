@@ -18,20 +18,25 @@ ztp:
     - TEAM02
     - TEAM03
     - TEAM04
+    - TEAM05
   clients:
     - name: DEVICE01
       mac: 0c:1a:c1:00:00:01
       ip4: 10.255.0.111
       group: TEAM01
-    - name: DEVICE02
+    - name: DEVICE01
       mac: 0c:1a:c1:00:00:02
       ip4: 10.255.0.112
       group: TEAM02
-    - name: DEVICE03
+    - name: DEVICE01
       mac: 0c:1a:c1:00:00:03
       ip4: 10.255.0.113
-      group: TEAM02
-    - name: DEVICE04
+      group: TEAM03
+    - name: DEVICE01
       mac: 0c:1a:c1:00:00:04
       ip4: 10.255.0.114
-      group: TEAM03
+      group: TEAM04
+    - name: DEVICE01
+      mac: 0c:1a:c1:00:00:05
+      ip4: 10.255.0.114
+      group: TEAM05
