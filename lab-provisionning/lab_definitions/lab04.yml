@@ -6,6 +6,24 @@ CVP_DEVICES:
     configlets:
         - TEAM01-DEVICE01
     imageBundle: []
+  TEAM02-DEVICE02:
+    name: TEAM02-DEVICE02
+    parentContainerName: TEAM02
+    configlets:
+        - TEAM02-DEVICE02
+    imageBundle: []
+  TEAM02-DEVICE03:
+    name: TEAM02-DEVICE03
+    parentContainerName: TEAM02
+    configlets:
+        - TEAM02-DEVICE03
+    imageBundle: []
+  TEAM03-DEVICE04:
+    name: TEAM03-DEVICE04
+    parentContainerName: TEAM03
+    configlets:
+        - TEAM03-DEVICE04
+    imageBundle: []
 
 CVP_CONTAINERS:
   STAGING:
@@ -14,3 +32,6 @@ CVP_CONTAINERS:
 CVP_CONFIGLETS:
   GLOBAL-aliases: "{{ lookup('file', 'eos_configs/common.cfg') }}"
   TEAM01-DEVICE01: "{{ lookup('file', 'eos_configs/base_configs/TEAM01-DEVICE01.cfg') }}"
+  TEAM02-DEVICE02: "{{ lookup('file', 'eos_configs/base_configs/TEAM02-DEVICE02.cfg') }}"
+  TEAM02-DEVICE03: "{{ lookup('file', 'eos_configs/base_configs/TEAM02-DEVICE03.cfg') }}"
+  TEAM03-DEVICE04: "{{ lookup('file', 'eos_configs/base_configs/TEAM03-DEVICE04.cfg') }}"
