@@ -12,6 +12,10 @@ CVP_DEVICES:
 CVP_CONTAINERS:
   STAGING:
     parent_container: Tenant
+    devices:
+{% for item in ztp.clients %}
+      - '{{item.group}}{{delimiter}}{{ item.name }}':
+{% endfor %}
 
 CVP_CONFIGLETS:
   GLOBAL-ALIASES: {% raw %}"{{ lookup('file', 'eos_configs/common.cfg') }}"{% endraw %}

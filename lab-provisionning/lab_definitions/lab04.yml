@@ -34,6 +34,12 @@ CVP_DEVICES:
 CVP_CONTAINERS:
   STAGING:
     parent_container: Tenant
+    devices:
+      - 'TEAM01-DEVICE01':
+      - 'TEAM02-DEVICE01':
+      - 'TEAM03-DEVICE01':
+      - 'TEAM04-DEVICE01':
+      - 'TEAM05-DEVICE01':
 
 CVP_CONFIGLETS:
   GLOBAL-ALIASES: "{{ lookup('file', 'eos_configs/common.cfg') }}"

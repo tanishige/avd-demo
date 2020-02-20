@@ -34,13 +34,23 @@ CVP_DEVICES:
 CVP_CONTAINERS:
   STAGING:
     parent_container: Tenant
-  TEAM01_DC:
+  TEAM01:
     parent_container: Tenant
-  TEAM02_DC:
+    devices:
+      - 'TEAM01-DEVICE01'
+  TEAM02:
     parent_container: Tenant
-  TEAM03_DC:
+    devices:
+      - 'TEAM02-DEVICE01'
+  TEAM03:
     parent_container: Tenant
-  TEAM04_DC:
+    devices:
+      - 'TEAM03-DEVICE01'
+  TEAM04:
     parent_container: Tenant
-  TEAM05_DC:
+    devices:
+      - 'TEAM04-DEVICE01'
+  TEAM05:
     parent_container: Tenant
+    devices:
+      - 'TEAM05-DEVICE01'

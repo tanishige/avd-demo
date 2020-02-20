@@ -12,7 +12,9 @@ CVP_DEVICES:
 CVP_CONTAINERS:
   STAGING:
     parent_container: Tenant
-{% for item in ztp.groupAttendees %}
-  {{ item }}_DC:
+{% for item in ztp.clients %}
+  {{ item.group }}:
     parent_container: Tenant
+    devices:
+      - '{{item.group}}{{delimiter}}{{ item.name }}'
 {% endfor %}

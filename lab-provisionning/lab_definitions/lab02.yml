@@ -34,14 +34,24 @@ CVP_DEVICES:
 CVP_CONTAINERS:
   TEAM01:
     parent_container: Tenant
+    devices:
+      - 'TEAM01-DEVICE01'
   TEAM02:
     parent_container: Tenant
+    devices:
+      - 'TEAM02-DEVICE01'
   TEAM03:
     parent_container: Tenant
+    devices:
+      - 'TEAM03-DEVICE01'
   TEAM04:
     parent_container: Tenant
+    devices:
+      - 'TEAM04-DEVICE01'
   TEAM05:
     parent_container: Tenant
+    devices:
+      - 'TEAM05-DEVICE01'
 
 
 CVP_CONFIGLETS:
