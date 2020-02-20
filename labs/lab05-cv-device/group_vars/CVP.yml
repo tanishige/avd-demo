@@ -6,7 +6,7 @@
 CVP_DEVICES:
   STUDENT_DEVICE:
     name: STUDENT_DEVICE
-    parentContainerName: STUDENT_DC
+    parentContainerName: STUDENT
     configlets:
         - STUDENT_DEVICE
     imageBundle: []  # Not yet supported

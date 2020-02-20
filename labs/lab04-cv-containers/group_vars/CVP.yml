@@ -4,13 +4,13 @@ CVP_CONFIGLETS:
   STUDENT_DEVICE-another-configlet: "alias a{{ 999 | random }} show version"
 
 CVP_CONTAINERS:
-  STUDENT_DEVICE:
+  STUDENT:
     parent_container: Tenant
-  STUDENT_DEVICE_DC:
-    parent_container: STUDENT_DEVICE
+  STUDENT_DC:
+    parent_container: STUDENT
     configlets:
       - 'GLOBAL-ALIASES'
-  STUDENT_DEVICE_LEAFS:
-    parent_container: STUDENT_DEVICE_DC
-  STUDENT_DEVICE_SPINES:
-    parent_container: STUDENT_DEVICE_DC
+  STUDENT_LEAFS:
+    parent_container: STUDENT_DC
+  STUDENT_SPINES:
+    parent_container: STUDENT_DC
