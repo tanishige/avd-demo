@@ -4,13 +4,6 @@
 
 Basic commands to test ansible with a basic installation.
 
-## Initial configuration
-
-> Only if you are running on your own
-
-```shell
-$ make configure
-```
 
 ## Execute lab
 
