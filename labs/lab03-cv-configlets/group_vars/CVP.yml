@@ -1,4 +1,4 @@
 ---
 CVP_CONFIGLETS:
-  STUDENT_DEVICE-alias: "alias a{{ 999 | random }} show version"
-  STUDENT_DEVICE-another-configlet: "alias a{{ 999 | random }} show version"
+  01TRAINING-alias: "alias a{{ 999 | random }} show version"
+  01TRAINING-01: "alias a{{ 999 | random }} show version"

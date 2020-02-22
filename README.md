@@ -21,13 +21,7 @@ __List of available labs:__
 
 ## TOI Lab preparation
 
-To prepare a complete TOI, some notes are available in [lab-provisionning](lab-provisionning) folder.
-
-It gives some highlights about:
-- ZTP configuration.
-- Lab topology definition.
-- Attendees scaling.
-
+All the labs have been built using Arista Test Drive topology. Start an ATD or ask to your Arista representative to access to a lab.
 
 ## Install TOI environment
 
@@ -52,12 +46,13 @@ __Install Ansible__
 $ pip install ansible==2.9
 ```
 
-__Configure attendee group__
+__Configure CloudVision IP Address__
 
 Go to [`labs`](labs/) folder and do the following command:
 
 ```shell
 $ cd labs
 
-$ make GROUP=<YOUR GROUP NAME> DEVICE=<DEVICE NAME> configure
+# Edit inventory file
+$ vim inventory.yml
 ```
