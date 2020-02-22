@@ -32,6 +32,13 @@ __Run docker container__
 Execute command:
 
 ```shell
+# Clone repository
+git clone https://github.com/titom73/ansible-cvp-toi.git
+
+# Move to directory
+cd ansible-cvp-toi
+
+# Start docker container
 $ docker run -it --rm -v $(PWD):/project inetsix/ansible sh
 ```
 
@@ -40,15 +47,24 @@ __Configure CloudVision IP Address__
 Go to [`labs`](labs/) folder and do the following command:
 
 ```shell
+# Move to lab folder
 $ cd labs
 
 # Edit inventory file
 $ vim inventory.yml
 ```
 
-## Install TOI environment
+## Install local environment.
 
 Run TOI in a python's virtual environment:
+
+```shell
+# Clone repository
+git clone https://github.com/titom73/ansible-cvp-toi.git
+
+# Move to directory
+cd ansible-cvp-toi
+```
 
 __Install venv__
 
@@ -63,31 +79,10 @@ $ virtualenv --no-site-packages -p $(which python2.7) .venv
 $ source .venv/bin/activate
 ```
 
-__Install Ansible__
+__Install Requirements__
 
 ```shell
-$ pip install ansible==2.9
-```
-
-__Configure CloudVision IP Address__
-
-Go to [`labs`](labs/) folder and do the following command:
-
-```shell
-$ cd labs
-
-# Edit inventory file
-$ vim inventory.yml
-```
-
-## Use docker image
-
-__Run docker container__
-
-Execute command:
-
-```shell
-$ docker run -it --rm -v $(PWD):/project inetsix/ansible sh
+$ pip install -r requirements.txt
 ```
 
 __Configure CloudVision IP Address__

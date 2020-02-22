@@ -8,7 +8,7 @@ Create and update containers on CloudVision.
 
 __1. Review containers vars__
 
-```shell
+```yaml
 $ cat group_vars/CVP.yml
 
 ---

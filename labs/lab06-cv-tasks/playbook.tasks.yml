@@ -19,6 +19,12 @@
         state: present
       register: CVP_CONFIGLET_RESULT
 
+    - name: "Gather CVP facts from {{inventory_hostname}}"
+      arista.cvp.cv_facts:
+        facts:
+          - tasks
+      register: CVP_FACTS
+
     - name: "Configure devices on {{inventory_hostname}}"
       arista.cvp.cv_device:
         devices: "{{CVP_DEVICES}}"

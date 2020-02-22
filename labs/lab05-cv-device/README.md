@@ -8,7 +8,7 @@ Manage configlets attached to a device.
 
 __1. Review configlet vars__
 
-```shell
+```yaml
 $ cat group_vars/CVP.yml
 
 ---
