@@ -59,8 +59,6 @@ And update content with
 ---
 CVP_CONFIGLETS:
   01TRAINING-alias: "alias a{{ 999 | random }} show version"
-  01TRAINING-01: "alias a{{ 999 | random }} show version"
-  01TRAINING-02: "{{lookup(', '../configlet.txt')}}"
 ```
 
 Run playbook and check on CloudVision
