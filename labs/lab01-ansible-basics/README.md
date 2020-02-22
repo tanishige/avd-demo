@@ -1,5 +1,9 @@
 # LAB 01 - Ansible Basics
 
+## About
+
+Basic commands to test ansible with a basic installation.
+
 ## Initial configuration
 
 > Only if you are running on your own

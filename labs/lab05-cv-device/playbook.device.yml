@@ -5,9 +5,9 @@
   gather_facts: no
 
   tasks:
-    - name: "Gather CVP facts {{inventory_hostname}}"
-      arista.cvp.cv_facts:
-      register: CVP_FACTS
+    # - name: "Gather CVP facts {{inventory_hostname}}"
+    #   arista.cvp.cv_facts:
+    #   register: CVP_FACTS
 
     # - name: "Configure configlet on {{inventory_hostname}}"
     #   arista.cvp.cv_configlet:
@@ -16,6 +16,10 @@
     #     configlet_filter: ["TRAINING"]
     #     state: present
     #   register: CVP_CONFIGLET_RESULT
+
+    - name: "Gather CVP facts {{inventory_hostname}}"
+      arista.cvp.cv_facts:
+      register: CVP_FACTS
 
     - name: "Configure devices on {{inventory_hostname}}"
       arista.cvp.cv_device:

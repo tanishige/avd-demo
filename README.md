@@ -23,6 +23,29 @@ __List of available labs:__
 
 All the labs have been built using Arista Test Drive topology. Start an ATD or ask to your Arista representative to access to a lab.
 
+To run labs, you can use either a docker container pre-configured or configure your system with Python and virtualenv.
+
+## Use docker image
+
+__Run docker container__
+
+Execute command:
+
+```shell
+$ docker run -it --rm -v $(PWD):/project inetsix/ansible sh
+```
+
+__Configure CloudVision IP Address__
+
+Go to [`labs`](labs/) folder and do the following command:
+
+```shell
+$ cd labs
+
+# Edit inventory file
+$ vim inventory.yml
+```
+
 ## Install TOI environment
 
 Run TOI in a python's virtual environment:
@@ -44,6 +67,27 @@ __Install Ansible__
 
 ```shell
 $ pip install ansible==2.9
+```
+
+__Configure CloudVision IP Address__
+
+Go to [`labs`](labs/) folder and do the following command:
+
+```shell
+$ cd labs
+
+# Edit inventory file
+$ vim inventory.yml
+```
+
+## Use docker image
+
+__Run docker container__
+
+Execute command:
+
+```shell
+$ docker run -it --rm -v $(PWD):/project inetsix/ansible sh
 ```
 
 __Configure CloudVision IP Address__
