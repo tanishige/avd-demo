@@ -4,7 +4,7 @@
 
 ## About
 
-This repository is part of `arista.cvp` ansible collection and provides lab materials. It contains both lab setup playbooks and lab playbooks for one team.
+This repository is part of [`arista.cvp`](https://github.com/titom73/ansible-cvp) ansible collection and provides lab materials. It contains both lab setup playbooks and lab playbooks for one team.
 
 __List of available labs:__
 
