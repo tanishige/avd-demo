@@ -1,63 +1,72 @@
-# LAB 03 - CloudVision Configlets
+# LAB 03 - Manage Configlet on Cloudvision.
 
-## Initial configuration
+## About
 
-> Only if you are running on your own
-
-```shell
-$ make configure
-```
-
-![](../../imgs/lab03-topology.png)
+Create, Update and Delete configlets on CloudVision.
 
 ## Execute lab
 
-__1. Run configlet playbook__
+__1. Review configlet vars__
+
+```shell
+$ cat group_vars/CVP.yml
+
+---
+CVP_CONFIGLETS:
+  01TRAINING-alias: "alias a{{ 999 | random }} show version"
+  01TRAINING-01: "alias a{{ 999 | random }} show version"
+```
+
+__2. Create 2 new configlets on CloudVision server.__
 
 ```shell
 $ ansible-playbook playbook.configlet.yml
 ```
 
-__2. Create a configlet named `TEAMXX-common`__
+__3. Optional: Add a new configlet from file__
+
+Create configlet with content of file [configlet.txt](configlet.txt)
+
+Edit [CVP.yml](group_vars/CVP.yml) file
+
+```
+$ vim group_vars/CVP.yml
+```
+
+And update content with
 
 ```yaml
-# edit group_vars/CVP.yml
 ---
 CVP_CONFIGLETS:
-  STUDENT_DEVICE-alias: "alias a{{ 999 | random }} show version"
-  STUDENT_DEVICE-another-configlet: "alias a{{ 999 | random }} show version"
-  TEAMXX-common: "{{ lookup('file', 'configlet.txt') }}"
-
-# edit playbook.configlet.yml
-- name: "Configure configlet on {{inventory_hostname}}"
-    arista.cvp.cv_configlet:
-    cvp_facts: "{{CVP_FACTS.ansible_facts}}"
-    configlets: "{{CVP_CONFIGLETS}}"
-    configlet_filter: ["TEAMXX-common"]
-    state: present
-    register: CVP_CONFIGLET_RESULT
+  01TRAINING-alias: "alias a{{ 999 | random }} show version"
+  01TRAINING-01: "alias a{{ 999 | random }} show version"
+  01TRAINING-02: "{{lookup(', '../configlet.txt')}}"
 ```
 
-> Change XX by your ID
+Run playbook and check on CloudVision
 
-__3. Display output of __`cv_configlet`__ module__
+__4. Remove configlet 01TRAINING-01 from CloudVision__
+
+Edit [CVP.yml](group_vars/CVP.yml) file
+
+```
+$ vim group_vars/CVP.yml
+```
+
+And update content with
 
 ```yaml
-# edit playbook.configlet.yml
-- name: 'Display cv_configlet result'
-    debug:
-    msg: '{{CVP_CONFIGLET_RESULT}}'
+---
+CVP_CONFIGLETS:
+  01TRAINING-alias: "alias a{{ 999 | random }} show version"
+  01TRAINING-01: "alias a{{ 999 | random }} show version"
+  01TRAINING-02: "{{lookup(', '../configlet.txt')}}"
 ```
 
-__4. Remove all created configlet__
+Run playbook and check on CloudVision
 
-```yaml
-# edit playbook.configlet.yml
-- name: "Configure configlet on {{inventory_hostname}}"
-    arista.cvp.cv_configlet:
-    cvp_facts: "{{CVP_FACTS.ansible_facts}}"
-    configlets: "{{CVP_CONFIGLETS}}"
-    configlet_filter: ["TEAMXX-common"]
-    state: absent
-    register: CVP_CONFIGLET_RESULT
-```
+__5. Remove all configlets created in this lab__
+
+- Edit playbook
+- Set mode to absent
+- Run playbook

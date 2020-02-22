@@ -1,5 +1,9 @@
 # LAB 01 - Ansible Basics
 
+## About
+
+Basic commands to test ansible with a basic installation.
+
 ## Initial configuration
 
 > Only if you are running on your own
@@ -26,6 +30,6 @@ $ ansible 127.0.0.1 -m ping
 __2. Display variables for a given host__
 
 ```shell
-$ ansible TEAM<XX>-SPINE1 -m debug -a "var=hostvars[inventory_hostname]"
+$ ansible DC-LEAF1A -m debug -a "var=hostvars[inventory_hostname]"
 ```
 

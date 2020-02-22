@@ -1,23 +1,33 @@
-# LAB 06 - CloudVision Tasks
+# LAB 06 - Manage tasks generated on CloudVision
 
-## Initial configuration
+## About
 
-> Only if you are running on your own
-
-```shell
-$ make configure
-```
-
-![](../../imgs/lab06-topology.png)
+Execute pending tasks on CloudVision.
 
 ## Execute lab
 
-1. Execute task playbook
+__1. Review configlet vars__
+
+```yaml
+$ cat group_vars/CVP.yml
+
+---
+CVP_CONFIGLETS:
+  01TRAINING-alias: "alias a{{ 999 | random }} show version"
+  01TRAINING-01: "alias a{{ 999 | random }} show version"
+
+CVP_DEVICES:
+  leaf1:
+    name: 'leaf1'
+    parentContainerName: Leaf
+    configlets:
+        - 'Leaf1-BGP-Lab'
+        - '01TRAINING-01'
+    imageBundle: []  # Not yet supported
+```
+
+__2. Attach configlet `Leaf1-BGP-LAB` to leaf1 device.__
 
 ```shell
 $ ansible-playbook playbook.tasks.yml
 ```
-
-2. Create and attach new configlet to device
-
-3. Run generated tasks

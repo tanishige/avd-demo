@@ -1,57 +1,37 @@
-# LAB 02 - CloudVision Facts
+# LAB 02 - CloudVision Collection overview
 
-## Initial configuration
+## About
 
-> Only if you are running on your own
-
-```shell
-$ make configure
-```
-
-![](../../imgs/lab02-topology.png)
-
+Basic commands to test ansible with a basic installation.
 
 ## Execute lab
 
-__1. Install __`arista.cvp`__ collection__
+__1. Install `arista.cvp` collection.__
 
 ```shell
-# Python requirements
-$ pip install treelib
-$ pip install requests
+# Install documentation.
+$ ansible-galaxy collection install arista.cvp:==1.0.4 -p ../collections/
 
-# Ansible collection for arista.cvp
-$ ansible-galaxy collection install arista.cvp:==1.0.2 -p ../collections
+# Display module documentation.
+$ ansible-doc arista.cvp.cv_device
 ```
 
-__2. Review collection structure__
-
-```shell
-$ ls ../collections
-```
-
-__3. Read collection documentation__
-
-```shell
-$ ansible-doc arista.cvp.cv_facts
-```
-
-
-__4. Collect CV facts__
+__2. Collect facts from CloudVision.__
 
 ```shell
 $ ansible-playbook playbook.facts.yml
 ```
 
-__5. Collect specific set of Facts:__
+__3. Optional: Collect only facts for devices__
+
+Get and display facts of active devices with their configuration.
 
 ```yaml
-# Edit playbook.facts.yml
 - name: "Gather CVP facts {{inventory_hostname}}"
     arista.cvp.cv_facts:
     facts:
-      device
+        devices
     gather_subset:
-      config
+        config
     register: cv_facts
 ```

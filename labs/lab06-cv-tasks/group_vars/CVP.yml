@@ -1,22 +1,13 @@
 ---
-# CVP_CONFIGLETS:
-#   STUDENT_DEVICE-alias: "alias a{{ 999 | random }} show version"
-#   STUDENT_DEVICE-another-configlet: "alias a{{ 999 | random }} show version"
+CVP_CONFIGLETS:
+  01TRAINING-alias: "alias a{{ 999 | random }} show version"
+  01TRAINING-01: "alias a{{ 999 | random }} show version"
 
 CVP_DEVICES:
-  STUDENT_DEVICE:
-    name: STUDENT_DEVICE
-    parentContainerName: STUDENT_DEVICE
+  leaf1:
+    name: 'leaf1'
+    parentContainerName: Leaf
     configlets:
-        - STUDENT_DEVICE
+        - 'Leaf1-BGP-Lab'
+        - '01TRAINING-01'
     imageBundle: []  # Not yet supported
-
-# CVP_CONTAINERS:
-#   STUDENT_DEVICE:
-#     parent_container: Tenant
-#   STUDENT_DEVICE_DC:
-#     parent_container: STUDENT_DEVICE
-#   STUDENT_DEVICE_LEAFS:
-#     parent_container: STUDENT_DEVICE_DC
-#   STUDENT_DEVICE_SPINES:
-#     parent_container: STUDENT_DEVICE_DC

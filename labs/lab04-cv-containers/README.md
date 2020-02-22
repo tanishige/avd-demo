@@ -1,43 +1,82 @@
-# LAB 04 - CloudVision Containers
+# LAB 04 - Manage Containers on CloudVision.
 
-## Initial configuration
+## About
 
-> Only if you are running on your own
-
-```shell
-$ make configure
-```
-
-![](../../imgs/lab02-topology.png)
+Create and update containers on CloudVision.
 
 ## Execute lab
 
-__1. Run container playbook__
+__1. Review containers vars__
+
+```yaml
+$ cat group_vars/CVP.yml
+
+---
+CVP_CONTAINERS:
+  TRAINING:
+    parent_container: Tenant
+  TRAINING_DC:
+    parent_container: TRAINING
+  TRAINING_LEAFS:
+    parent_container: TRAINING_DC
+  TRAINING_SPINES:
+    parent_container: TRAINING_DC
+    devices:
+      - 'spine1'
+```
+
+__2. Create continers and move device.__
 
 ```shell
-$ ansible-playbook playbook.container.yml
+$ ansible-playbook playbook.configlet.yml
 ```
 
-2. __Attach GLOBAL-ALIASES to TEAMXX_DC__
+> On cloudvision server, cancel task and move back device to its initial container
+
+__3. Optional: Attach 01TRAINING-01 to TRAINING container__
+
+Edit [CVP.yml](group_vars/CVP.yml) file
+
+```
+$ vim group_vars/CVP.yml
+```
+
+And update content with
 
 ```yaml
-# edit group_vars/CVP.yml
+---
+CVP_CONFIGLETS:
+  01TRAINING-alias: "alias a{{ 999 | random }} show version"
+  01TRAINING-01: "alias a{{ 999 | random }} show version"
+
 CVP_CONTAINERS:
-  STUDENT_DEVICE_DC:
-    parent_container: STUDENT_DEVICE
+  TRAINING:
+    parent_container: Tenant
     configlets:
-      - 'GLOBAL-ALIASES'
+      - '01TRAINING-01'
+  TRAINING_DC:
+    parent_container: TRAINING
+  TRAINING_LEAFS:
+    parent_container: TRAINING_DC
+  TRAINING_SPINES:
+    parent_container: TRAINING_DC
+    devices:
+      - 'spine1'
 ```
 
-3. __Remove container topology__
+Run playbook and check on CloudVision
+
+> On cloudvision server, cancel task and move back device to its initial container
+
+__4. Remove Container topology__
+
+Edit playbook and change mode to `delete`
 
 ```yaml
-# edit playbook.container.yml
 - name: "Configure containers on {{inventory_hostname}}"
     arista.cvp.cv_container:
-      cvp_facts: "{{CVP_FACTS.ansible_facts}}"
-      topology: "{{CVP_CONTAINERS}}"
-      save_topology: true
-      mode: delete
+    cvp_facts: "{{CVP_FACTS.ansible_facts}}"
+    topology: "{{CVP_CONTAINERS}}"
+    mode: delete
     register: CVP_CONTAINERS_RESULT
 ```

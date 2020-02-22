@@ -21,17 +21,50 @@ __List of available labs:__
 
 ## TOI Lab preparation
 
-To prepare a complete TOI, some notes are available in [lab-provisionning](lab-provisionning) folder.
+All the labs have been built using Arista Test Drive topology. Start an ATD or ask to your Arista representative to access to a lab.
 
-It gives some highlights about:
-- ZTP configuration.
-- Lab topology definition.
-- Attendees scaling.
+To run labs, you can use either a docker container pre-configured or configure your system with Python and virtualenv.
 
+## Use docker image
 
-## Install TOI environment
+__Run docker container__
+
+Execute command:
+
+```shell
+# Clone repository
+git clone https://github.com/titom73/ansible-cvp-toi.git
+
+# Move to directory
+cd ansible-cvp-toi
+
+# Start docker container
+$ docker run -it --rm -v $(PWD):/project inetsix/ansible sh
+```
+
+__Configure CloudVision IP Address__
+
+Go to [`labs`](labs/) folder and do the following command:
+
+```shell
+# Move to lab folder
+$ cd labs
+
+# Edit inventory file
+$ vim inventory.yml
+```
+
+## Install local environment.
 
 Run TOI in a python's virtual environment:
+
+```shell
+# Clone repository
+git clone https://github.com/titom73/ansible-cvp-toi.git
+
+# Move to directory
+cd ansible-cvp-toi
+```
 
 __Install venv__
 
@@ -46,18 +79,19 @@ $ virtualenv --no-site-packages -p $(which python2.7) .venv
 $ source .venv/bin/activate
 ```
 
-__Install Ansible__
+__Install Requirements__
 
 ```shell
-$ pip install ansible==2.9
+$ pip install -r requirements.txt
 ```
 
-__Configure attendee group__
+__Configure CloudVision IP Address__
 
 Go to [`labs`](labs/) folder and do the following command:
 
 ```shell
 $ cd labs
 
-$ make GROUP=<YOUR GROUP NAME> DEVICE=<DEVICE NAME> configure
+# Edit inventory file
+$ vim inventory.yml
 ```

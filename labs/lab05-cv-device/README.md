@@ -1,58 +1,52 @@
-# LAB 05 - CloudVision EOS Devices
+# LAB 05 - Manage device on CloudVision
 
-## Initial configuration
+## About
 
-> Only if you are running on your own
-
-```shell
-$ make configure
-```
-
-![](../../imgs/lab05-topology.png)
+Manage configlets attached to a device.
 
 ## Execute lab
 
-1. __Run device playbook__
+__1. Review configlet vars__
+
+```yaml
+$ cat group_vars/CVP.yml
+
+---
+CVP_DEVICES:
+  leaf1:
+    name: 'leaf1'
+    parentContainerName: Leaf
+    configlets:
+        - 'Leaf1-BGP-Lab'
+        - 'BaseIPv4_Leaf1'
+    imageBundle: []  # Not yet supported
+```
+
+__2. Attach configlet `Leaf1-BGP-LAB` to leaf1 device.__
 
 ```shell
 $ ansible-playbook playbook.device.yml
 ```
 
-2. __Create a new container and move device__
+__3. Optional: Create new configlets and attach them to leaf1__
 
-```yaml
-# edit group_vars/CVP.yml
+```shell
+$ cat group_vars/CVP.yml
+
+---
+CVP_CONFIGLETS:
+  01TRAINING-alias: "alias a{{ 999 | random }} show version"
+  01TRAINING-01: "alias a{{ 999 | random }} show version"
+
 CVP_DEVICES:
-  TEAM01-device01-SPINE1:
-    name: TEAM01-device01
-    parentContainerName: TEAM01-DEVICE01
+  leaf1:
+    name: 'leaf1'
+    parentContainerName: Leaf
     configlets:
-        - TEAM01-DEVICE01
-CVP_CONTAINERS:
-  TEAM01-DEVICE01:
-    parent_container: Tenant
-
-# edit playbook.device.yml
-- name: "Gather CVP facts {{inventory_hostname}}"
-  arista.cvp.cv_facts:
-  register: CVP_FACTS
-
-- name: "Configure containers on {{inventory_hostname}}"
-  arista.cvp.cv_container:
-    cvp_facts: "{{CVP_FACTS.ansible_facts}}"
-    topology: "{{CVP_CONTAINERS}}"
-    save_topology: true
-  register: CVP_CONTAINERS_RESULT
-
-- name: "Gather CVP facts {{inventory_hostname}}"
-  arista.cvp.cv_facts:
-  register: CVP_FACTS
-
-- name: "Configure devices on {{inventory_hostname}}"
-  arista.cvp.cv_device:
-    devices: "{{CVP_DEVICES}}"
-    cvp_facts: '{{CVP_FACTS.ansible_facts}}'
-    device_filter: ['STUDENT_DEVICE']
-    # state: present
-  register: CVP_DEVICES_RESULTS
+        - 'Leaf1-BGP-Lab'
+        - 'BaseIPv4_Leaf1'
+        - '01TRAINING-01'
+    imageBundle: []  # Not yet supported
 ```
+
+Update playbook accordingly.
