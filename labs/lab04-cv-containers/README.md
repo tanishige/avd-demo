@@ -74,7 +74,7 @@ Edit playbook and change mode to `delete`
 
 ```yaml
 - name: "Configure containers on {{inventory_hostname}}"
-    arista.cvp.cv_container:
+  arista.cvp.cv_container:
     cvp_facts: "{{CVP_FACTS.ansible_facts}}"
     topology: "{{CVP_CONTAINERS}}"
     mode: delete
