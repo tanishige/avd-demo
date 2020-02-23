@@ -8,12 +8,16 @@ This repository is part of [`arista.cvp`](https://github.com/titom73/ansible-cvp
 
 __List of available labs:__
 
-- _Lab 01_: [Ansible Basics](labs/lab01-ansible-basics)
-- _Lab 02_: [CloudVision Collection overview](labs/lab02-arista.cvp-overview)
-- _Lab 03_: [Configlets](labs/lab03-cv-configlets)
-- _Lab 04_: [Containers](labs/lab04-cv-containers)
-- _Lab 05_: [Devices](labs/lab05-cv-device)
-- _Lab 06_: [Tasks](labs/lab05-cv-tasks)
+- Arista Validated Design:
+  - _AVD Lab_: [Use Ansible as configuration builder](avd)
+
+- Ansible & CloudVision:
+  - _Lab 01_: [Ansible Basics](labs/lab01-ansible-basics)
+  - _Lab 02_: [CloudVision Collection overview](labs/lab02-arista.cvp-overview)
+  - _Lab 03_: [Configlets](labs/lab03-cv-configlets)
+  - _Lab 04_: [Containers](labs/lab04-cv-containers)
+  - _Lab 05_: [Devices](labs/lab05-cv-device)
+  - _Lab 06_: [Tasks](labs/lab05-cv-tasks)
 
 <p align="center">
   <img src='imgs/cv_ansible_logo.png' alt='Arista CloudVision and Ansible'/>
