@@ -1,0 +1,328 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"down",
+				"down"
+			],
+			[
+				"topo",
+				"topo_pass"
+			],
+			[
+				"link",
+				"links_host"
+			],
+			[
+				"swports",
+				"swports"
+			],
+			[
+				"US",
+				"US"
+			],
+			[
+				"res",
+				"res"
+			],
+			[
+				"command",
+				"command"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/stani/temp/ansible-cvp-toi"
+	],
+	"file_history":
+	[
+		"/Users/stani/temp/ansible-avd-cloudvision-demo/inventory.yml",
+		"/Users/stani/temp/ansible-cvp-toi/labs/lab01-ansible-basics/group_vars/DC.yml",
+		"/Users/stani/arista/Ansible AVD TOI.txt",
+		"/Users/stani/arista/cva_vm.txt",
+		"/Users/stani/arista/IIJ/cpe/ipwatchd.txt",
+		"/Users/stani/arista/ansible.txt",
+		"/Users/stani/arista/Klab",
+		"/Users/stani/Downloads/session_20200210_172117.json",
+		"/Users/stani/arista/IIJ/cpe/atd1206.txt",
+		"/Users/stani/arista/IIJ/iij_rfe.txt",
+		"/Users/stani/arista/linememo.txt",
+		"/Users/stani/arista/rLAB.txt",
+		"/Users/stani/Downloads/vEOS-lab-4.23.1F.vmdk.sha512sum",
+		"/Users/stani/elevator.js",
+		"/Users/stani/vagrant/ubu/atd/ansible.cfg",
+		"/Users/stani/vagrant/ubu/atd/atd.yaml",
+		"/Users/stani/arista/IIJ/atd-11-29.txt",
+		"/Users/stani/vagrant/ubu/atd/host_vars/bb-host1",
+		"/Users/stani/vagrant/ubu/atd/templates/routing.j2",
+		"/Users/stani/arista/IIJ/NSX/LF15.txt",
+		"/Users/stani/vagrant/ubu/cpe/host_vars/l2sw-leaf3",
+		"/Users/stani/vagrant/ubu/cpe/cpe.yaml",
+		"/Users/stani/vagrant/ubu/cpe/templates/basic.j2",
+		"/Users/stani/vagrant/ubu/cpe/host_vars/l2sw-leaf4",
+		"/Users/stani/vagrant/ubu/cpe/templates/routing.j2",
+		"/Users/stani/vagrant/ubu/cpe/templates/full.j2",
+		"/Users/stani/arista/IIJ/cpe/cpe.yaml",
+		"/Users/stani/Downloads/EOSアップグレードログ/show_queue-monitor_length.txt",
+		"/Users/stani/Downloads/log_20190927/閉塞状態からspeed autoにすると対向がLinkUpする.mht",
+		"/Users/stani/Downloads/log_20190927/tech_Arista7020TR.log",
+		"/Users/stani/Downloads/log_20190927/tech_Arista7020SR.log",
+		"/Users/stani/Downloads/log_20190927/test.mht",
+		"/Users/stani/Downloads/log_20190927/閉塞状態からspeed autoにすると対向がLinkUpする.mht",
+		"/Users/stani/arista/IIJ/cpe_0913.txt",
+		"/Users/stani/arista/vEOS/lic/license_vEOS.json",
+		"/Users/stani/Downloads/20190804 buffer curving  2.txt",
+		"/Users/stani/arista/IIJ/cicdhandson.txt",
+		"/Users/stani/arista/IIJ/20180119-7280QR_4.19.4M_BUM/12_pst/mte-cphx1-sfasw004_tech_20180119_164100.txt",
+		"/Users/stani/Downloads/bootstrap.conf",
+		"/Users/stani/arista/IIJ/tacacs-plus.txt",
+		"/Users/stani/arista/cvp/tacacs-plus.txt",
+		"/Users/stani/arista/7160 VRRP testing.txt",
+		"/Users/stani/arista/floatingstatic.txt",
+		"/Users/stani/arista/IIJ/dupip.txt",
+		"/Users/stani/Downloads/tacacs_ipv6.txt",
+		"/Users/stani/Downloads/varpTracker.py",
+		"/Users/stani/arista/cvp/CVP setup",
+		"/Users/stani/arista/7160 VRRP testing",
+		"/Users/stani/Downloads/20190624_vrrp_7160-2/20190624_vrrp_7160-2.txt",
+		"/Users/stani/Downloads/20190624_vrrp_7160-2/7160-2_vrrp_delay180ms.log",
+		"/Users/stani/arista/vxlan_bgp.txt",
+		"/Users/stani/arista/ALPM.txt",
+		"/Users/stani/Downloads/o201907122143164/MLAG-02(DCS-7280SR2A-48YC6).txt",
+		"/Users/stani/Downloads/o201907122143164/MLAG-01(DCS-7280SR2A-48YC6).txt",
+		"/Users/stani/Downloads/o201907122143164/Edge-01(DCS-7280SRM-40CX2).txt",
+		"/Users/stani/arista/ATD_ansible_sample.txt",
+		"/Users/stani/arista/linememo",
+		"/Users/stani/arista/ATD_ansible.txt",
+		"/Users/stani/Downloads/7060CX_ipv6static_OK/7060CX2_unnumbered_NG.LOG",
+		"/Users/stani/Downloads/7060CX_ipv6static_OK/7060CX_ipv6static_OK.LOG",
+		"/Users/stani/Downloads/7060CX_ipv6static_OK/7060CX2_ipv6static_OK.LOG",
+		"/Users/stani/Downloads/7060CX_ipv6static_OK/7060CX_unnumbered_NG.LOG",
+		"/Users/stani/Downloads/lldp.py",
+		"/Users/stani/vagrant/ubu/ptm.py",
+		"/Users/stani/arista/ptm.py",
+		"/Users/stani/arista/network ci.txt",
+		"/Users/stani/arista/cicdhandson.txt",
+		"/Users/stani/arista/network ci",
+		"/Users/stani/Downloads/outputs 6/configs/prod_Leaf-3",
+		"/Users/stani/Downloads/outputs 6/configs/lab_Leaf-3",
+		"/Users/stani/arista/calico.txt",
+		"/Users/stani/arista/Nifty/qos_7280.txt",
+		"/Users/stani/arista/Sample_Config_TOKAI.txt",
+		"/Users/stani/arista/TOKAI.txt",
+		"/Users/stani/arista/TOKAI",
+		"/Users/stani/Downloads/20190304_NEC(VPC)/iij_rfe.txt",
+		"/Users/stani/arista/eAPI",
+		"/Users/stani/Downloads/20190304_NEC(VPC)/smcka1nl3249.log",
+		"/Users/stani/Downloads/20190304_NEC(VPC)/20190301_Service-Leaf#10-1_tech.log",
+		"/Users/stani/arista/Rakuten/rakuten_tap_test",
+		"/Users/stani/Downloads/AWS 上でのCVPのインストールについて.txt",
+		"/Users/stani/Downloads/outputs 6/diffs/prod_Leaf-3.txt",
+		"/Users/stani/Downloads/outputs 6/diffs/prod_Leaf-1.txt",
+		"/Users/stani/Downloads/outputs 6/diffs/prod_Spine-1.txt",
+		"/Users/stani/arista/Nifty/config_qos2.txt",
+		"/Users/stani/arista/Nifty/config_qos1.txt",
+		"/Users/stani/arista/IIJ/NSX/after_ifdownup_show_hsc_detail_ovsdb",
+		"/Users/stani/arista/IIJ/NSX/after_Motion_show_hsc_detail_ovsdb",
+		"/Users/stani/arista/IIJ/NSX/LF16.txt",
+		"/Users/stani/arista/IIJ/NSX/before_vMotion_show_hsc_detail_ovsdb",
+		"/Users/stani/arista/IIJ/NSX/cvx-nsx.txt",
+		"/Users/stani/Downloads/7280R-BR.conf",
+		"/Users/stani/Downloads/logs_20181012/cfs-vtep00/show_tech-support20181012.log",
+		"/Users/stani/arista/IIJ/20180123-arista_bum_case14/14_pst/idb-pr-sfsw006_tech_20180123_170602.txt",
+		"/Users/stani/Downloads/MWM_Visib_Analytics_20181104233341.csv",
+		"/Users/stani/arista/IIJ/RF30245803_BUM_trouble_test/lab/tzk-cphg1-extsw000_tech_after.log",
+		"/Users/stani/arista/IIJ/NSX/bfd/sh-tech20181023-vtep01.log",
+		"/Users/stani/arista/IIJ/20180119-7280QR_4.19.4M_BUM/12_pre/idb-pr-sfsw006_tech_20180119_162630.txt",
+		"/Users/stani/arista/IIJ/NSX/bfd/sh-tech20181023-vtep00.log",
+		"/Users/stani/arista/vEOS/aws_acc_key.txt",
+		"/Users/stani/arista/cvp/AWS 上でのCVPのインストールについて.txt",
+		"/Users/stani/arista/cvp/AWS 上でのCVPのインストールについて",
+		"/Volumes/NO NAME/Brocade/cvp/release_get_cvpi_folsom.sh",
+		"/Users/stani/arista/vEOS/lic/lab3.9.py",
+		"/Users/stani/arista/vEOS/lic/lab3.8.py",
+		"/Users/stani/arista/vEOS/lic/anycloud_demo.txt",
+		"/Users/stani/arista/qos_7280.txt",
+		"/Users/stani/arista/vEOS　Router IPSec Flow Parallization",
+		"/Users/stani/arista/IIJ/NSX/bfd/vtep02_show-tech-2018-08-15.1340.log",
+		"/Users/stani/arista/IIJ/NSX/bfd/vtep01_show-tech-2018-08-15.1339.log",
+		"/Users/stani/Downloads/veosaws_tech-support_2018-05-30.0449.log",
+		"/Users/stani/arista/docker.txt",
+		"/Users/stani/arista/vEOS/veos1_conf.txt",
+		"/Users/stani/arista/vEOS/veosaws_conf.txt",
+		"/Users/stani/Downloads/veosaws_conf.txt",
+		"/Users/stani/Downloads/veos1_conf.txt",
+		"/Users/stani/Downloads/veos1_tech-support_2018-05-30.1703.log",
+		"/Users/stani/Downloads/vEOS-lab-4.20.7M.vmdk.sha512sum",
+		"/Users/stani/Downloads/CVX-20180620-2.log",
+		"/Users/stani/Downloads/CVX-log_20180620/CVX-20180620.log",
+		"/Users/stani/Downloads/CVX-log_20180622/CVX-20180622-2.log",
+		"/Users/stani/Downloads/Arista-log_20180619/CloudVision_tech-support_20180619.log",
+		"/Users/stani/arista/IIJ/cvx.txt",
+		"/Users/stani/arista/IIJ/NSX/support 2/ovsdb_detail.txt",
+		"/Users/stani/arista/IIJ/NSX/support/cvxlog/messages",
+		"/Users/stani/arista/IIJ/NSX/neighbor/neighbor-cvx.txt",
+		"/Users/stani/arista/IIJ/NSX/support 2/vEOS_tech-support_2018-05-15.0934.log",
+		"/Users/stani/arista/IIJ/NSX/neighbor/neighbor-vEOS.txt"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "cvp.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/arista/TOKAI.txt"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 258.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

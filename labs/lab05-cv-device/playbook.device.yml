@@ -29,6 +29,6 @@
         state: present
       register: CVP_DEVICES_RESULTS
 
-    # - name: 'Display debug'
-    #   debug:
-    #     msg: '{{CVP_DEVICES_RESULTS}}'
+    - name: 'Display debug'
+      debug:
+        msg: '{{CVP_DEVICES_RESULTS}}'

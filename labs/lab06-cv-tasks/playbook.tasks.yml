@@ -8,7 +8,7 @@
     - name: "Gather CVP facts from {{inventory_hostname}}"
       arista.cvp.cv_facts:
         facts:
-          - tasks
+          configlets
       register: CVP_FACTS
 
     - name: "Configure configlet on {{inventory_hostname}}"
@@ -21,8 +21,6 @@
 
     - name: "Gather CVP facts from {{inventory_hostname}}"
       arista.cvp.cv_facts:
-        facts:
-          - tasks
       register: CVP_FACTS
 
     - name: "Configure devices on {{inventory_hostname}}"
