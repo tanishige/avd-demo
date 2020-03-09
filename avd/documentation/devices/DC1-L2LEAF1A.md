@@ -6,14 +6,14 @@
 
 | Management Interface | description | VRF | IP Address | Gateway |
 | -------------------- | ----------- | --- | ---------- | ------- |
-| Management1 | oob_management | MGMT | 192.168.0.31/24 | 192.168.0.2 |
+| Management1 | oob_management | default | 192.168.0.31/24 | 192.168.0.2 |
 
 ### Management Interfaces Device Configuration
 
 ```eos
 interface Management1
    description oob_management
-   vrf MGMT
+   vrf default
    ip address 192.168.0.31/24
 !
 ```
@@ -28,13 +28,13 @@ No Hardware Counters defined
 
 | CV Compression | Ingest gRPC URL | Ingest Authentication Key | Smash Excludes | Ingest Exclude | Ingest VRF |  NTP VRF |
 | -------------- | --------------- | ------------------------- | -------------- | -------------- | ---------- | -------- |
-| gzip | 192.168.0.5:9910 |  | ale,flexCounter,hardware,kni,pulse,strata | /Sysdb/cell/1/agent,/Sysdb/cell/2/agent | MGMT | MGMT |
+| gzip | 192.168.0.5:9910 |  | ale,flexCounter,hardware,kni,pulse,strata | /Sysdb/cell/1/agent,/Sysdb/cell/2/agent | default | default |
 
 ### TerminAttr Daemon Device Configuration
 
 ```eos
 daemon TerminAttr
-   exec /usr/bin/TerminAttr -ingestgrpcurl=192.168.0.5:9910 -cvcompression=gzip -ingestauth=key, -smashexcludes=ale,flexCounter,hardware,kni,pulse,strata -ingestexclude=/Sysdb/cell/1/agent,/Sysdb/cell/2/agent -ingestvrf=MGMT -taillogs
+   exec /usr/bin/TerminAttr -ingestgrpcurl=192.168.0.5:9910 -cvcompression=gzip -ingestauth=key, -smashexcludes=ale,flexCounter,hardware,kni,pulse,strata -ingestexclude=/Sysdb/cell/1/agent,/Sysdb/cell/2/agent -ingestvrf=default -taillogs
    no shutdown
 !
 ```
@@ -60,37 +60,18 @@ vlan internal order ascending range 1006 1199
 
 | Name Server | Source VRF |
 | ----------- | ---------- |
-| 192.168.0.2 | MGMT |
-| 8.8.8.8 | MGMT |
+| 192.168.0.4 | default |
 
 ### Name Servers Device Configuration
 
 ```eos
-ip name-server vrf MGMT 192.168.0.2
-ip name-server vrf MGMT 8.8.8.8
+ip name-server vrf default 192.168.0.4
 !
 ```
 
 ## NTP
 
-### NTP Summary
-
-Local Interface: Management1
-VRF: MGMT
-
-| Node | Primary |
-| ---- | ------- |
-| 0.jp.pool.ntp.org | True |
-| 1.jp.pool.ntp.org | - |
-
-### NTP Device Configuration
-
-```eos
-ntp local-interface vrf MGMT Management1
-ntp server vrf MGMT 0.jp.pool.ntp.org prefer
-ntp server vrf MGMT 1.jp.pool.ntp.org
-!
-```
+No NTP servers defined
 
 ## Spanning Tree
 
@@ -183,13 +164,11 @@ vlan 131
 
 | VRF Name | IP Routing |
 | -------- | ---------- |
-| MGMT |  disabled |
+| default |  disabled |
 
 ### VRF Instances Device Configuration
 
 ```eos
-vrf instance MGMT
-!
 ```
 
 ## BFD Multihop Interval
@@ -276,12 +255,12 @@ No VXLAN interface defined
 
 | VRF | Destination Prefix | Fowarding Address / Interface |
 | --- | ------------------ | ----------------------------- |
-| MGMT | 0.0.0.0/0 | 192.168.0.2 |
+| default | 0.0.0.0/0 | 192.168.0.2 |
 
 ### Static Routes Device Configuration
 
 ```eos
-ip route vrf MGMT 0.0.0.0/0 192.168.0.2
+ip route vrf default 0.0.0.0/0 192.168.0.2
 !
 ```
 
@@ -291,13 +270,13 @@ ip route vrf MGMT 0.0.0.0/0 192.168.0.2
 
 | VRF | Routing Enabled |
 | --- | --------------- |
-| MGMT | False |
+| default | False |
 
 ### IP Routing Device Configuration
 
 ```eos
 ip routing
-no ip routing vrf MGMT
+#no ip routing vrf default
 !
 ```
 

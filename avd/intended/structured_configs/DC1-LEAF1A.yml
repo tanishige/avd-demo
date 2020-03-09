@@ -32,7 +32,7 @@ daemon_terminattr:
       - 192.168.0.5
     port: 9910
   ingestauth_key: 
-  ingestvrf: MGMT
+  ingestvrf: default
   smashexcludes: "ale,flexCounter,hardware,kni,pulse,strata"
   ingestexclude: "/Sysdb/cell/1/agent,/Sysdb/cell/2/agent"
 
@@ -57,19 +57,12 @@ logging:
 ### Name Servers ###
 name_server:
   source:
-    vrf: MGMT
+    vrf: default
   nodes:
-    - 192.168.0.2
-    - 8.8.8.8
+    - 192.168.0.4
 
 ### NTP Servers ###
 ntp_server:
-  local_interface:
-    vrf: MGMT
-    interface: Management1
-  nodes:
-    - 0.jp.pool.ntp.org
-    - 1.jp.pool.ntp.org
 
 ### Redundancy ###
 redundancy:
@@ -225,7 +218,7 @@ vlans:
 
 ### VRFs ###
 vrfs:
-  MGMT:
+  default:
     ip_routing: False
 ## Tenant_A ##
   Tenant_A_APP_Zone:
@@ -345,7 +338,7 @@ loopback_interfaces:
 management_interfaces:
   Management1:
     description: oob_management
-    vrf: MGMT
+    vrf: default
     ip_address: 192.168.0.14/24
     gateway: 192.168.0.2
 
@@ -615,7 +608,7 @@ virtual_source_nat_vrfs:
 
 ### static routes ###
 static_routes:
-  - vrf: MGMT
+  - vrf: default
     destination_address_prefix: 0.0.0.0/0
     gateway: 192.168.0.2
 
@@ -641,7 +634,7 @@ mlag_configuration:
   peer_address: 10.255.252.1
   peer_address_heartbeat:
     peer_ip: 192.168.0.15
-    vrf: MGMT
+    vrf: default
   dual_primary_detection_delay: 5
   peer_link: Port-Channel3
   reload_delay_mlag: 360
@@ -940,4 +933,4 @@ queue_monitor_streaming:
 management_api_http:
   enable_https: True
   enable_vrfs:
-    MGMT:
+    default:

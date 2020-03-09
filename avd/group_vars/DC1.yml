@@ -28,13 +28,14 @@ cvp_ingestauth_key: ''
 
 # OOB Management network default gateway.
 mgmt_gateway: 192.168.0.2
+mgmt_interface_vrf: default
 
 # dns servers.
 name_servers:
-  - 192.168.0.2
-  - 8.8.8.8
+  - 192.168.0.4
+#  - 8.8.8.8
 
 # NTP Servers IP or DNS name, first NTP server will be prefered, and sourced from Managment VRF
 ntp_servers:
-  - 0.jp.pool.ntp.org
-  - 1.jp.pool.ntp.org
+#  - 0.jp.pool.ntp.org
+#  - 1.jp.pool.ntp.org

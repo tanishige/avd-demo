@@ -6,3 +6,5 @@ mkdir documentation
 mkdir documentation/DC1_FABRIC
 mkdir intended/configs
 mkdir documentation/devices
+mkdir config_backup
+
