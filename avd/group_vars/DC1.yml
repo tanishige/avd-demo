@@ -36,6 +36,6 @@ name_servers:
 #  - 8.8.8.8
 
 # NTP Servers IP or DNS name, first NTP server will be prefered, and sourced from Managment VRF
-ntp_servers:
+#ntp_servers:
 #  - 0.jp.pool.ntp.org
 #  - 1.jp.pool.ntp.org
