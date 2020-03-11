@@ -6,14 +6,13 @@
 
 | Management Interface | description | VRF | IP Address | Gateway |
 | -------------------- | ----------- | --- | ---------- | ------- |
-| Management1 | oob_management | default | 192.168.0.14/24 | 192.168.0.2 |
+| Management1 | oob_management | default | 192.168.0.14/24 | 10.33.144.1 |
 
 ### Management Interfaces Device Configuration
 
 ```eos
 interface Management1
    description oob_management
-   vrf default
    ip address 192.168.0.14/24
 !
 ```
@@ -28,13 +27,13 @@ No Hardware Counters defined
 
 | CV Compression | Ingest gRPC URL | Ingest Authentication Key | Smash Excludes | Ingest Exclude | Ingest VRF |  NTP VRF |
 | -------------- | --------------- | ------------------------- | -------------- | -------------- | ---------- | -------- |
-| gzip | 192.168.0.5:9910 |  | ale,flexCounter,hardware,kni,pulse,strata | /Sysdb/cell/1/agent,/Sysdb/cell/2/agent | default | default |
+| gzip | 192.168.0.5:9910 | 1a38fe7df56879d685e51b6f0ff86327 | ale,flexCounter,hardware,kni,pulse,strata | /Sysdb/cell/1/agent,/Sysdb/cell/2/agent | default | default |
 
 ### TerminAttr Daemon Device Configuration
 
 ```eos
 daemon TerminAttr
-   exec /usr/bin/TerminAttr -ingestgrpcurl=192.168.0.5:9910 -cvcompression=gzip -ingestauth=key, -smashexcludes=ale,flexCounter,hardware,kni,pulse,strata -ingestexclude=/Sysdb/cell/1/agent,/Sysdb/cell/2/agent -ingestvrf=default -taillogs
+   exec /usr/bin/TerminAttr -ingestgrpcurl=192.168.0.5:9910 -cvcompression=gzip -ingestauth=key,1a38fe7df56879d685e51b6f0ff86327 -smashexcludes=ale,flexCounter,hardware,kni,pulse,strata -ingestexclude=/Sysdb/cell/1/agent,/Sysdb/cell/2/agent -ingestvrf=default -taillogs
    no shutdown
 !
 ```
@@ -278,6 +277,7 @@ vlan 4094
 ### VRF Instances Device Configuration
 
 ```eos
+  
 vrf instance Tenant_A_APP_Zone
 !
 vrf instance Tenant_A_DB_Zone
@@ -688,12 +688,12 @@ ip address virtual source-nat vrf Tenant_A_OP_Zone address 10.255.1.3
 
 | VRF | Destination Prefix | Fowarding Address / Interface |
 | --- | ------------------ | ----------------------------- |
-| default | 0.0.0.0/0 | 192.168.0.2 |
+| default | 0.0.0.0/0 | 10.33.144.1 |
 
 ### Static Routes Device Configuration
 
 ```eos
-ip route vrf default 0.0.0.0/0 192.168.0.2
+ip route vrf default 0.0.0.0/0 10.33.144.1
 !
 ```
 
@@ -718,7 +718,6 @@ ip route vrf default 0.0.0.0/0 192.168.0.2
 
 ```eos
 ip routing
-#no ip routing vrf default
 ip routing vrf Tenant_A_APP_Zone
 ip routing vrf Tenant_A_DB_Zone
 ip routing vrf Tenant_A_OP_Zone
