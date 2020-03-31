@@ -1,0 +1,35 @@
+
+---
+- name: Build Switch configuration
+  hosts: DC1_FABRIC
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: change host name
+      eos_config:
+        lines:
+        - hostname {{ inventory_hostname }}
+        - no dns domain
+#- name: cv init
+#  hosts: cv_server
+#  connection: local
+#  gather_facts: false
+#
+#  vars:
+#    devices_inventory:
+#      DC1-SPINE1:
+#        name: DC1-SPINE1
+#        parent_container: DC1_SPINES
+#        imageBundle: []
+#
+#  tasks:
+#    - name: Gather info CVP
+#      arista.cvp.cv_facts:
+#      register: CVP_FACTS
+#
+#    - name: remove dev from container
+#      arista.cvp.cv_device:
+#        devices: "{{ devices_inventory }}"
+#        cvp_facts: '{{CVP_FACTS.ansible_facts}}'
+#        state: absent

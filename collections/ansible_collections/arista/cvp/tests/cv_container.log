@@ -1,0 +1,121 @@
+2019-12-10 08:11:15,501 Starting new HTTPS connection (1): 10.90.224.122:444
+2019-12-10 08:11:16,258 https://10.90.224.122:444 "POST /web/login/authenticate.do HTTP/1.1" 200 None
+2019-12-10 08:11:16,460 https://10.90.224.122:444 "GET /web/cvpInfo/getCvpInfo.do HTTP/1.1" 200 22
+2019-12-10 08:11:16,462 Setting API version to 2019
+2019-12-10 08:11:16,476 Importing API library: /var/folders/bj/x0pdlg4s46vbk9t8916xkfb00000gn/T/ansible_cv_container_payload_phrrxqhh/ansible_cv_container_payload.zip/ansible_collections/arista/cvp/plugins/module_utils/cv_api2019.py
+2019-12-10 08:11:16,476 ** children
+2019-12-10 08:11:16,477 ** children
+2019-12-10 08:11:16,477 ** children
+2019-12-10 08:13:31,656 Starting new HTTPS connection (1): 10.90.224.122:444
+2019-12-10 08:13:32,514 https://10.90.224.122:444 "POST /web/login/authenticate.do HTTP/1.1" 200 None
+2019-12-10 08:13:32,708 https://10.90.224.122:444 "GET /web/cvpInfo/getCvpInfo.do HTTP/1.1" 200 22
+2019-12-10 08:13:32,709 Setting API version to 2019
+2019-12-10 08:13:32,722 Importing API library: /var/folders/bj/x0pdlg4s46vbk9t8916xkfb00000gn/T/ansible_cv_container_payload_dcubwe7z/ansible_cv_container_payload.zip/ansible_collections/arista/cvp/plugins/module_utils/cv_api2019.py
+2019-12-10 08:13:32,723 ** [{'Fabric': {'children': [{'Leaves': {'children': ['MLAG01']}}, 'Spines']}}]
+2019-12-10 08:13:32,723 ** [{'Leaves': {'children': ['MLAG01']}}, 'Spines']
+2019-12-10 08:13:32,723 ** ['MLAG01']
+2019-12-10 08:15:46,454 Starting new HTTPS connection (1): 10.90.224.122:444
+2019-12-10 08:15:47,164 https://10.90.224.122:444 "POST /web/login/authenticate.do HTTP/1.1" 200 None
+2019-12-10 08:15:47,356 https://10.90.224.122:444 "GET /web/cvpInfo/getCvpInfo.do HTTP/1.1" 200 22
+2019-12-10 08:15:47,357 Setting API version to 2019
+2019-12-10 08:15:47,370 Importing API library: /var/folders/bj/x0pdlg4s46vbk9t8916xkfb00000gn/T/ansible_cv_container_payload__fep27_f/ansible_cv_container_payload.zip/ansible_collections/arista/cvp/plugins/module_utils/cv_api2019.py
+2019-12-10 08:15:47,371 ** [{'Fabric': {'children': [{'Leaves': {'children': ['MLAG01']}}, 'Spines']}}]
+2019-12-10 08:15:47,371 ** [{'Leaves': {'children': ['MLAG01']}}, 'Spines']
+2019-12-10 08:15:47,371 ** ['MLAG01']
+2019-12-10 08:15:47,582 https://10.90.224.122:444 "GET /web/inventory/containers HTTP/1.1" 200 338
+2019-12-10 08:15:47,896 https://10.90.224.122:444 "GET /web/provisioning/getContainerInfoById.do?containerId=root HTTP/1.1" 200 166
+2019-12-10 08:15:48,111 https://10.90.224.122:444 "GET /web/provisioning/getContainerInfoById.do?containerId=container_545_1480393148819697 HTTP/1.1" 200 171
+2019-12-10 08:15:48,388 https://10.90.224.122:444 "GET /web/provisioning/searchTopology.do?queryParam=Tenant&startIndex=0&endIndex=0 HTTP/1.1" 200 231
+2019-12-10 08:15:48,606 https://10.90.224.122:444 "GET /web/provisioning/getContainerInfoById.do?containerId=undefined_container HTTP/1.1" 200 185
+2019-12-10 08:15:48,853 https://10.90.224.122:444 "GET /web/provisioning/searchTopology.do?queryParam=Tenant&startIndex=0&endIndex=0 HTTP/1.1" 200 231
+2019-12-10 08:15:49,254 https://10.90.224.122:444 "POST /web/provisioning/addTempAction.do?format=topology&queryParam=&nodeId=root HTTP/1.1" 200 4938
+2019-12-10 08:15:49,608 https://10.90.224.122:444 "POST /web/provisioning/v2/saveTopology.do HTTP/1.1" 200 42
+2019-12-10 08:15:49,818 https://10.90.224.122:444 "GET /web/inventory/containers HTTP/1.1" 200 461
+2019-12-10 08:15:50,051 https://10.90.224.122:444 "GET /web/provisioning/getContainerInfoById.do?containerId=root HTTP/1.1" 200 166
+2019-12-10 08:15:50,414 https://10.90.224.122:444 "GET /web/provisioning/getContainerInfoById.do?containerId=container_545_1480393148819697 HTTP/1.1" 200 171
+2019-12-10 08:15:50,676 https://10.90.224.122:444 "GET /web/provisioning/searchTopology.do?queryParam=Tenant&startIndex=0&endIndex=0 HTTP/1.1" 200 231
+2019-12-10 08:15:50,888 https://10.90.224.122:444 "GET /web/provisioning/getContainerInfoById.do?containerId=undefined_container HTTP/1.1" 200 185
+2019-12-10 08:15:51,122 https://10.90.224.122:444 "GET /web/provisioning/searchTopology.do?queryParam=Tenant&startIndex=0&endIndex=0 HTTP/1.1" 200 231
+2019-12-10 08:15:51,370 https://10.90.224.122:444 "GET /web/provisioning/getContainerInfoById.do?containerId=container_2041_6112540754647267 HTTP/1.1" 200 170
+2019-12-10 08:15:51,602 https://10.90.224.122:444 "GET /web/provisioning/searchTopology.do?queryParam=Tenant&startIndex=0&endIndex=0 HTTP/1.1" 200 231
+2019-12-10 08:15:51,929 https://10.90.224.122:444 "POST /web/provisioning/addTempAction.do?format=topology&queryParam=&nodeId=root HTTP/1.1" 200 5384
+2019-12-10 08:15:52,245 https://10.90.224.122:444 "POST /web/provisioning/v2/saveTopology.do HTTP/1.1" 200 42
+2019-12-10 08:15:52,458 https://10.90.224.122:444 "GET /web/inventory/containers HTTP/1.1" 200 584
+2019-12-10 08:15:52,810 https://10.90.224.122:444 "GET /web/provisioning/getContainerInfoById.do?containerId=root HTTP/1.1" 200 166
+2019-12-10 08:15:53,041 https://10.90.224.122:444 "GET /web/provisioning/getContainerInfoById.do?containerId=container_545_1480393148819697 HTTP/1.1" 200 171
+2019-12-10 08:15:53,294 https://10.90.224.122:444 "GET /web/provisioning/searchTopology.do?queryParam=Tenant&startIndex=0&endIndex=0 HTTP/1.1" 200 231
+2019-12-10 08:15:53,498 https://10.90.224.122:444 "GET /web/provisioning/getContainerInfoById.do?containerId=undefined_container HTTP/1.1" 200 185
+2019-12-10 08:15:53,771 https://10.90.224.122:444 "GET /web/provisioning/searchTopology.do?queryParam=Tenant&startIndex=0&endIndex=0 HTTP/1.1" 200 231
+2019-12-10 08:15:53,982 https://10.90.224.122:444 "GET /web/provisioning/getContainerInfoById.do?containerId=container_2041_6112540754647267 HTTP/1.1" 200 170
+2019-12-10 08:15:54,254 https://10.90.224.122:444 "GET /web/provisioning/searchTopology.do?queryParam=Tenant&startIndex=0&endIndex=0 HTTP/1.1" 200 231
+2019-12-10 08:15:54,469 https://10.90.224.122:444 "GET /web/provisioning/getContainerInfoById.do?containerId=container_2043_6112543387552596 HTTP/1.1" 200 170
+2019-12-10 08:15:54,778 https://10.90.224.122:444 "GET /web/provisioning/searchTopology.do?queryParam=Fabric&startIndex=0&endIndex=0 HTTP/1.1" 200 257
+2019-12-10 08:15:55,142 https://10.90.224.122:444 "POST /web/provisioning/addTempAction.do?format=topology&queryParam=&nodeId=root HTTP/1.1" 200 5803
+2019-12-10 08:15:55,654 https://10.90.224.122:444 "POST /web/provisioning/v2/saveTopology.do HTTP/1.1" 200 42
+2019-12-10 08:15:55,903 https://10.90.224.122:444 "GET /web/inventory/containers HTTP/1.1" 200 707
+2019-12-10 08:15:56,151 https://10.90.224.122:444 "GET /web/provisioning/getContainerInfoById.do?containerId=root HTTP/1.1" 200 166
+2019-12-10 08:15:56,408 https://10.90.224.122:444 "GET /web/provisioning/getContainerInfoById.do?containerId=container_545_1480393148819697 HTTP/1.1" 200 171
+2019-12-10 08:15:56,662 https://10.90.224.122:444 "GET /web/provisioning/searchTopology.do?queryParam=Tenant&startIndex=0&endIndex=0 HTTP/1.1" 200 231
+2019-12-10 08:15:56,908 https://10.90.224.122:444 "GET /web/provisioning/getContainerInfoById.do?containerId=undefined_container HTTP/1.1" 200 185
+2019-12-10 08:15:57,157 https://10.90.224.122:444 "GET /web/provisioning/searchTopology.do?queryParam=Tenant&startIndex=0&endIndex=0 HTTP/1.1" 200 231
+2019-12-10 08:15:57,415 https://10.90.224.122:444 "GET /web/provisioning/getContainerInfoById.do?containerId=container_2041_6112540754647267 HTTP/1.1" 200 170
+2019-12-10 08:15:57,667 https://10.90.224.122:444 "GET /web/provisioning/searchTopology.do?queryParam=Tenant&startIndex=0&endIndex=0 HTTP/1.1" 200 231
+2019-12-10 08:15:57,881 https://10.90.224.122:444 "GET /web/provisioning/getContainerInfoById.do?containerId=container_2043_6112543387552596 HTTP/1.1" 200 170
+2019-12-10 08:15:58,109 https://10.90.224.122:444 "GET /web/provisioning/searchTopology.do?queryParam=Fabric&startIndex=0&endIndex=0 HTTP/1.1" 200 257
+2019-12-10 08:15:58,320 https://10.90.224.122:444 "GET /web/provisioning/getContainerInfoById.do?containerId=container_2045_6112546729240240 HTTP/1.1" 200 170
+2019-12-10 08:15:58,578 https://10.90.224.122:444 "GET /web/provisioning/searchTopology.do?queryParam=Leaves&startIndex=0&endIndex=0 HTTP/1.1" 200 257
+2019-12-10 08:15:58,915 https://10.90.224.122:444 "POST /web/provisioning/addTempAction.do?format=topology&queryParam=&nodeId=root HTTP/1.1" 200 6223
+2019-12-10 08:15:59,309 https://10.90.224.122:444 "POST /web/provisioning/v2/saveTopology.do HTTP/1.1" 200 42
+2019-12-10 08:15:59,554 https://10.90.224.122:444 "GET /web/provisioning/searchTopology.do?queryParam=Spines&startIndex=0&endIndex=0 HTTP/1.1" 200 257
+2019-12-10 08:15:59,765 https://10.90.224.122:444 "GET /web/provisioning/getConfigletsByContainerId.do?containerId=container_2047_6112550436641202&startIndex=0&endIndex=0 HTTP/1.1" 200 51
+2019-12-10 08:15:59,996 https://10.90.224.122:444 "GET /web/inventory/devices?provisioned=true HTTP/1.1" 200 1791
+2019-12-10 08:16:00,257 https://10.90.224.122:444 "GET /web/provisioning/getContainerInfoById.do?containerId=container_545_1480393148819697 HTTP/1.1" 200 171
+2019-12-10 08:16:00,527 https://10.90.224.122:444 "GET /web/provisioning/getContainerInfoById.do?containerId=container_545_1480393148819697 HTTP/1.1" 200 171
+2019-12-10 08:16:00,833 https://10.90.224.122:444 "GET /web/provisioning/getContainerInfoById.do?containerId=container_545_1480393148819697 HTTP/1.1" 200 171
+2019-12-10 08:16:01,071 https://10.90.224.122:444 "GET /web/provisioning/getConfigletsByNetElementId.do?netElementId=50:5d:9e:7a:dc:3a&startIndex=0&endIndex=0 HTTP/1.1" 200 1896
+2019-12-10 08:16:01,326 https://10.90.224.122:444 "GET /web/provisioning/getContainerInfoById.do?containerId=container_545_1480393148819697 HTTP/1.1" 200 171
+2019-12-10 08:16:01,791 https://10.90.224.122:444 "POST /web/provisioning/addTempAction.do?format=topology&queryParam=&nodeId=root HTTP/1.1" 200 9331
+2019-12-10 08:16:12,246 https://10.90.224.122:444 "POST /web/provisioning/v2/saveTopology.do HTTP/1.1" 200 47
+2019-12-10 08:16:12,563 https://10.90.224.122:444 "GET /web/provisioning/searchTopology.do?queryParam=MLAG01&startIndex=0&endIndex=0 HTTP/1.1" 200 257
+2019-12-10 08:16:12,798 https://10.90.224.122:444 "GET /web/provisioning/getConfigletsByContainerId.do?containerId=container_2045_6112546729240240&startIndex=0&endIndex=0 HTTP/1.1" 200 51
+2019-12-10 08:16:13,075 https://10.90.224.122:444 "GET /web/inventory/devices?provisioned=true HTTP/1.1" 200 1792
+2019-12-10 08:16:13,309 https://10.90.224.122:444 "GET /web/provisioning/getContainerInfoById.do?containerId=container_545_1480393148819697 HTTP/1.1" 200 171
+2019-12-10 08:16:13,592 https://10.90.224.122:444 "GET /web/provisioning/getContainerInfoById.do?containerId=container_545_1480393148819697 HTTP/1.1" 200 171
+2019-12-10 08:16:13,914 https://10.90.224.122:444 "GET /web/provisioning/getContainerInfoById.do?containerId=container_2047_6112550436641202 HTTP/1.1" 200 170
+2019-12-10 08:16:14,174 https://10.90.224.122:444 "GET /web/provisioning/getConfigletsByNetElementId.do?netElementId=50:5d:9e:7a:dc:1a&startIndex=0&endIndex=0 HTTP/1.1" 200 1817
+2019-12-10 08:16:14,436 https://10.90.224.122:444 "GET /web/provisioning/getContainerInfoById.do?containerId=container_545_1480393148819697 HTTP/1.1" 200 171
+2019-12-10 08:16:15,360 https://10.90.224.122:444 "POST /web/provisioning/addTempAction.do?format=topology&queryParam=&nodeId=root HTTP/1.1" 200 11294
+2019-12-10 08:16:26,264 https://10.90.224.122:444 "POST /web/provisioning/v2/saveTopology.do HTTP/1.1" 200 47
+2019-12-10 08:16:26,538 https://10.90.224.122:444 "GET /web/provisioning/searchTopology.do?queryParam=MLAG01&startIndex=0&endIndex=0 HTTP/1.1" 200 257
+2019-12-10 08:16:26,817 https://10.90.224.122:444 "GET /web/provisioning/getConfigletsByContainerId.do?containerId=container_2045_6112546729240240&startIndex=0&endIndex=0 HTTP/1.1" 200 51
+2019-12-10 08:16:27,106 https://10.90.224.122:444 "GET /web/inventory/devices?provisioned=true HTTP/1.1" 200 1793
+2019-12-10 08:16:27,479 https://10.90.224.122:444 "GET /web/provisioning/getContainerInfoById.do?containerId=container_2045_6112546729240240 HTTP/1.1" 200 170
+2019-12-10 08:16:27,883 https://10.90.224.122:444 "GET /web/provisioning/getContainerInfoById.do?containerId=container_545_1480393148819697 HTTP/1.1" 200 171
+2019-12-10 08:16:28,215 https://10.90.224.122:444 "GET /web/provisioning/getContainerInfoById.do?containerId=container_2047_6112550436641202 HTTP/1.1" 200 170
+2019-12-10 08:16:28,777 https://10.90.224.122:444 "GET /web/provisioning/getConfigletsByNetElementId.do?netElementId=50:5d:9e:7a:dc:2a&startIndex=0&endIndex=0 HTTP/1.1" 200 1817
+2019-12-10 08:16:29,155 https://10.90.224.122:444 "GET /web/provisioning/getContainerInfoById.do?containerId=container_545_1480393148819697 HTTP/1.1" 200 171
+2019-12-10 08:16:30,462 https://10.90.224.122:444 "POST /web/provisioning/addTempAction.do?format=topology&queryParam=&nodeId=root HTTP/1.1" 200 13260
+2019-12-10 08:16:43,130 https://10.90.224.122:444 "POST /web/provisioning/v2/saveTopology.do HTTP/1.1" 200 47
+2019-12-10 08:16:43,499 https://10.90.224.122:444 "GET /web/provisioning/searchTopology.do?queryParam=Fabric&startIndex=0&endIndex=0 HTTP/1.1" 200 257
+2019-12-10 08:16:43,714 https://10.90.224.122:444 "GET /web/provisioning/getConfigletsByContainerId.do?containerId=container_2041_6112540754647267&startIndex=0&endIndex=0 HTTP/1.1" 200 51
+2019-12-10 08:16:43,907 https://10.90.224.122:444 "GET /web/provisioning/getConfigletsByContainerId.do?containerId=container_2041_6112540754647267&startIndex=0&endIndex=0 HTTP/1.1" 200 51
+2019-12-10 08:16:44,435 https://10.90.224.122:444 "POST /web/provisioning/addTempAction.do?format=topology&queryParam=&nodeId=root HTTP/1.1" 200 12138
+2019-12-10 08:16:45,494 https://10.90.224.122:444 "POST /web/provisioning/v2/saveTopology.do HTTP/1.1" 200 42
+2019-12-10 08:16:45,809 https://10.90.224.122:444 "GET /web/provisioning/searchTopology.do?queryParam=Spines&startIndex=0&endIndex=0 HTTP/1.1" 200 257
+2019-12-10 08:16:46,010 https://10.90.224.122:444 "GET /web/provisioning/getConfigletsByContainerId.do?containerId=container_2047_6112550436641202&startIndex=0&endIndex=0 HTTP/1.1" 200 51
+2019-12-10 08:16:46,217 https://10.90.224.122:444 "GET /web/provisioning/getConfigletsByContainerId.do?containerId=container_2047_6112550436641202&startIndex=0&endIndex=0 HTTP/1.1" 200 51
+2019-12-10 08:16:46,888 https://10.90.224.122:444 "POST /web/provisioning/addTempAction.do?format=topology&queryParam=&nodeId=root HTTP/1.1" 200 12138
+2019-12-10 08:16:47,475 https://10.90.224.122:444 "POST /web/provisioning/v2/saveTopology.do HTTP/1.1" 200 42
+2019-12-10 08:16:47,839 https://10.90.224.122:444 "GET /web/provisioning/searchTopology.do?queryParam=Leaves&startIndex=0&endIndex=0 HTTP/1.1" 200 257
+2019-12-10 08:16:48,080 https://10.90.224.122:444 "GET /web/provisioning/getConfigletsByContainerId.do?containerId=container_2043_6112543387552596&startIndex=0&endIndex=0 HTTP/1.1" 200 51
+2019-12-10 08:16:48,288 https://10.90.224.122:444 "GET /web/provisioning/getConfigletsByContainerId.do?containerId=container_2043_6112543387552596&startIndex=0&endIndex=0 HTTP/1.1" 200 51
+2019-12-10 08:16:49,231 https://10.90.224.122:444 "POST /web/provisioning/addTempAction.do?format=topology&queryParam=&nodeId=root HTTP/1.1" 200 14617
+2019-12-10 08:16:50,564 https://10.90.224.122:444 "POST /web/provisioning/v2/saveTopology.do HTTP/1.1" 200 53
+2019-12-10 08:16:50,823 https://10.90.224.122:444 "GET /web/provisioning/searchTopology.do?queryParam=MLAG01&startIndex=0&endIndex=0 HTTP/1.1" 200 257
+2019-12-10 08:16:51,020 https://10.90.224.122:444 "GET /web/provisioning/getConfigletsByContainerId.do?containerId=container_2045_6112546729240240&startIndex=0&endIndex=0 HTTP/1.1" 200 51
+2019-12-10 08:16:51,215 https://10.90.224.122:444 "GET /web/provisioning/getConfigletsByContainerId.do?containerId=container_2045_6112546729240240&startIndex=0&endIndex=0 HTTP/1.1" 200 51
+2019-12-10 08:16:52,052 https://10.90.224.122:444 "POST /web/provisioning/addTempAction.do?format=topology&queryParam=&nodeId=root HTTP/1.1" 200 14617
+2019-12-10 08:16:53,894 https://10.90.224.122:444 "POST /web/provisioning/v2/saveTopology.do HTTP/1.1" 200 53
+2019-12-10 08:16:54,094 https://10.90.224.122:444 "GET /web/task/getTaskById.do?taskId=279 HTTP/1.1" 200 1937
+2019-12-10 08:16:54,293 https://10.90.224.122:444 "GET /web/task/getTaskById.do?taskId=278 HTTP/1.1" 200 1937
+2019-12-10 08:16:54,491 https://10.90.224.122:444 "GET /web/task/getTaskById.do?taskId=280 HTTP/1.1" 200 1937

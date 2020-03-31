@@ -1,0 +1,32 @@
+
+---
+- name: cv init
+  hosts: cv_server
+  connection: local
+  gather_facts: false
+
+  vars:
+    devices_inventory:
+      cvx01:
+        name: cvx01
+        parent_container: CVX
+        configlets:
+        - 'BaseIPv4_Cvx01'
+        imageBundle: []
+
+  tasks:
+    - name: Gather info CVP
+      arista.cvp.cv_facts:
+        facts:
+          devices
+        gather_subset:
+          config
+      register: CVP_FACTS
+
+    - name: remove dev from container
+      arista.cvp.cv_device:
+        devices: "{{ devices_inventory }}"
+        cvp_facts: '{{CVP_FACTS.ansible_facts}}'
+        device_filter: ['cvx01']
+        state: absent
+ 

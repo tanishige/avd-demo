@@ -1,0 +1,812 @@
+ansible-playbook 2.9.1
+  config file = /Users/tgrimonet/Projects/ansible-devel/github/aristanetworks/upstream-ansible-cvp/ansible_collections/arista/cvp/tests/ansible.cfg
+  configured module search path = [u'/Users/tgrimonet/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible
+  executable location = /Users/tgrimonet/.venv/venv2.7-cvp-ansible/bin/ansible-playbook
+  python version = 2.7.16 (default, Apr 12 2019, 15:32:40) [GCC 4.2.1 Compatible Apple LLVM 10.0.1 (clang-1001.0.46.3)]
+Using /Users/tgrimonet/Projects/ansible-devel/github/aristanetworks/upstream-ansible-cvp/ansible_collections/arista/cvp/tests/ansible.cfg as config file
+setting up inventory plugins
+host_list declined parsing /Users/tgrimonet/Projects/ansible-devel/github/aristanetworks/upstream-ansible-cvp/ansible_collections/arista/cvp/tests/inventory.ini as it did not pass its verify_file() method
+script declined parsing /Users/tgrimonet/Projects/ansible-devel/github/aristanetworks/upstream-ansible-cvp/ansible_collections/arista/cvp/tests/inventory.ini as it did not pass its verify_file() method
+auto declined parsing /Users/tgrimonet/Projects/ansible-devel/github/aristanetworks/upstream-ansible-cvp/ansible_collections/arista/cvp/tests/inventory.ini as it did not pass its verify_file() method
+yaml declined parsing /Users/tgrimonet/Projects/ansible-devel/github/aristanetworks/upstream-ansible-cvp/ansible_collections/arista/cvp/tests/inventory.ini as it did not pass its verify_file() method
+Parsed /Users/tgrimonet/Projects/ansible-devel/github/aristanetworks/upstream-ansible-cvp/ansible_collections/arista/cvp/tests/inventory.ini inventory source with ini plugin
+Loading callback plugin default of type stdout, v2.0 from /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/plugins/callback/default.pyc
+Loading callback plugin profile_tasks of type aggregate, v2.0 from /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/plugins/callback/profile_tasks.pyc
+
+PLAYBOOK: playbook.reset.topology.yml ***************************************************************************************************************************************************************************
+Positional arguments: playbook.reset.topology.yml
+subset: cvp_2019
+become_method: sudo
+inventory: (u'/Users/tgrimonet/Projects/ansible-devel/github/aristanetworks/upstream-ansible-cvp/ansible_collections/arista/cvp/tests/inventory.ini',)
+forks: 5
+tags: (u'all',)
+verbosity: 5
+connection: smart
+timeout: 10
+1 plays in playbook.reset.topology.yml
+
+PLAY [Build Testing topology using Dev CVP servers] *************************************************************************************************************************************************************
+META: ran handlers
+
+TASK [#01 - Collect initial facts from cvp_2019] ****************************************************************************************************************************************************************
+task path: /Users/tgrimonet/Projects/ansible-devel/github/aristanetworks/upstream-ansible-cvp/ansible_collections/arista/cvp/tests/playbook.reset.topology.yml:42
+Saturday 07 December 2019  12:30:30 +0100 (0:00:00.051)       0:00:00.052 ***** 
+<10.90.224.122> attempting to start connection
+<10.90.224.122> using connection plugin httpapi
+<10.90.224.122> local domain socket does not exist, starting it
+<10.90.224.122> control socket path is /Users/tgrimonet/.ansible/pc/778ab219f3
+<10.90.224.122> local domain socket listeners started successfully
+<10.90.224.122> loaded API plugin eos from path /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/plugins/httpapi/eos.py for network_os eos
+<10.90.224.122> 
+<10.90.224.122> local domain socket path is /Users/tgrimonet/.ansible/pc/778ab219f3
+<10.90.224.122> ESTABLISH LOCAL CONNECTION FOR USER: tgrimonet
+<10.90.224.122> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/tgrimonet/.ansible/tmp/ansible-local-16979YcJaZM/ansible-tmp-1575718231.8-30757280687199 `" && echo ansible-tmp-1575718231.8-30757280687199="` echo /Users/tgrimonet/.ansible/tmp/ansible-local-16979YcJaZM/ansible-tmp-1575718231.8-30757280687199 `" ) && sleep 0'
+Using module_utils file ansible_collections/arista
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/connection.py
+Using module_utils file ansible_collections/arista/cvp/plugins/module_utils/cv_client
+Using module_utils file ansible_collections/arista/cvp/plugins/module_utils/cv_client_errors
+Using module_utils file ansible_collections/arista/cvp
+Using module_utils file ansible_collections
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/basic.py
+Using module_utils file ansible_collections/arista/cvp/plugins/module_utils
+Using module_utils file ansible_collections/arista/cvp/plugins
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/_text.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/common/json.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/six/__init__.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/common/__init__.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/common/_collections_compat.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/common/collections.py
+Using module_utils file ansible_collections/arista/cvp/plugins/module_utils/cv_api2019
+Using module_utils file ansible_collections/arista/cvp/plugins/module_utils/cv_api2018
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/common/text/formatters.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/common/validation.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/common/text/converters.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/pycompat24.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/common/text/__init__.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/common/process.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/parsing/convert_bool.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/common/_utils.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/common/parameters.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/parsing/__init__.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/common/_json_compat.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/common/sys_info.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/common/file.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/distro/__init__.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/distro/_distro.py
+Using module file /Users/tgrimonet/Projects/ansible-devel/github/aristanetworks/upstream-ansible-cvp/ansible_collections/arista/cvp/plugins/modules/cv_facts.py
+<10.90.224.122> PUT /Users/tgrimonet/.ansible/tmp/ansible-local-16979YcJaZM/tmpRoEO2O TO /Users/tgrimonet/.ansible/tmp/ansible-local-16979YcJaZM/ansible-tmp-1575718231.8-30757280687199/AnsiballZ_cv_facts.py
+<10.90.224.122> EXEC /bin/sh -c 'chmod u+x /Users/tgrimonet/.ansible/tmp/ansible-local-16979YcJaZM/ansible-tmp-1575718231.8-30757280687199/ /Users/tgrimonet/.ansible/tmp/ansible-local-16979YcJaZM/ansible-tmp-1575718231.8-30757280687199/AnsiballZ_cv_facts.py && sleep 0'
+<10.90.224.122> EXEC /bin/sh -c '$(which python) /Users/tgrimonet/.ansible/tmp/ansible-local-16979YcJaZM/ansible-tmp-1575718231.8-30757280687199/AnsiballZ_cv_facts.py && sleep 0'
+<10.90.224.122> EXEC /bin/sh -c 'rm -f -r /Users/tgrimonet/.ansible/tmp/ansible-local-16979YcJaZM/ansible-tmp-1575718231.8-30757280687199/ > /dev/null 2>&1 && sleep 0'
+ok: [cvp_2019] => {
+    "ansible_facts": {
+        "configlets": [
+            {
+                "config": "alias a623 show version", 
+                "containerCount": 2, 
+                "containers": [
+                    "Fabric", 
+                    "Leaves"
+                ], 
+                "dateTimeInLongFormat": 1575665326979, 
+                "devices": [
+                    "veos01", 
+                    "veos02", 
+                    "veos03"
+                ], 
+                "editable": true, 
+                "isAutoBuilder": "", 
+                "isDefault": "no", 
+                "isDraft": false, 
+                "key": "configlet_869_5521883362959794", 
+                "name": "ANSIBLE_TESTING_CONTAINER", 
+                "netElementCount": 3, 
+                "note": "## Managed by Ansible ##", 
+                "reconciled": false, 
+                "sslConfig": false, 
+                "type": "Static", 
+                "user": "cvpadmin", 
+                "visible": true
+            }, 
+            {
+                "config": "alias a623 show version", 
+                "containerCount": 0, 
+                "containers": [], 
+                "dateTimeInLongFormat": 1575665327925, 
+                "devices": [
+                    "veos01", 
+                    "veos02"
+                ], 
+                "editable": true, 
+                "isAutoBuilder": "", 
+                "isDefault": "no", 
+                "isDraft": false, 
+                "key": "configlet_868_5521883137181984", 
+                "name": "ANSIBLE_TESTING_VEOS", 
+                "netElementCount": 2, 
+                "note": "## Managed by Ansible ##", 
+                "reconciled": false, 
+                "sslConfig": false, 
+                "type": "Static", 
+                "user": "cvpadmin", 
+                "visible": true
+            }, 
+            {
+                "config": "alias a261 show version\n", 
+                "containerCount": 0, 
+                "containers": [], 
+                "dateTimeInLongFormat": 1575516959546, 
+                "devices": [], 
+                "editable": true, 
+                "isAutoBuilder": "", 
+                "isDefault": "no", 
+                "isDraft": false, 
+                "key": "configlet_1450_5667350866775913", 
+                "name": "RECONCILE_172.24.0.2", 
+                "netElementCount": 0, 
+                "note": "", 
+                "reconciled": true, 
+                "sslConfig": false, 
+                "type": "Static", 
+                "user": "cvpadmin", 
+                "visible": true
+            }, 
+            {
+                "config": "alias a261 show version\n", 
+                "containerCount": 0, 
+                "containers": [], 
+                "dateTimeInLongFormat": 1575516969559, 
+                "devices": [], 
+                "editable": true, 
+                "isAutoBuilder": "", 
+                "isDefault": "no", 
+                "isDraft": false, 
+                "key": "configlet_1454_5667360907247548", 
+                "name": "RECONCILE_172.24.0.3", 
+                "netElementCount": 0, 
+                "note": "", 
+                "reconciled": true, 
+                "sslConfig": false, 
+                "type": "Static", 
+                "user": "cvpadmin", 
+                "visible": true
+            }, 
+            {
+                "config": "alias a261 show version\n", 
+                "containerCount": 0, 
+                "containers": [], 
+                "dateTimeInLongFormat": 1575516980808, 
+                "devices": [], 
+                "editable": true, 
+                "isAutoBuilder": "", 
+                "isDefault": "no", 
+                "isDraft": false, 
+                "key": "configlet_1458_5667372174974308", 
+                "name": "RECONCILE_172.24.0.4", 
+                "netElementCount": 0, 
+                "note": "", 
+                "reconciled": true, 
+                "sslConfig": false, 
+                "type": "Static", 
+                "user": "cvpadmin", 
+                "visible": true
+            }, 
+            {
+                "config": "", 
+                "containerCount": 0, 
+                "containers": [], 
+                "dateTimeInLongFormat": 1569850167152, 
+                "devices": [], 
+                "editable": true, 
+                "isAutoBuilder": "", 
+                "isDefault": "no", 
+                "isDraft": false, 
+                "key": "SYS_TelemetryBuilderV3_1569850167152", 
+                "name": "SYS_TelemetryBuilderV3", 
+                "netElementCount": 0, 
+                "note": "", 
+                "reconciled": false, 
+                "sslConfig": false, 
+                "type": "Builder", 
+                "user": "cvp system", 
+                "visible": true
+            }, 
+            {
+                "config": "daemon TerminAttr\n  exec /usr/bin/TerminAttr -ingestgrpcurl=172.17.0.3:9910 -taillogs -ingestauth=key, -smashexcludes=ale,flexCounter,hardware,kni,pulse,strata -ingestexclude=/Sysdb/cell/1/agent,/Sysdb/cell/2/agent\n  no shutdown", 
+                "containerCount": 0, 
+                "containers": [], 
+                "dateTimeInLongFormat": 1575375581508, 
+                "devices": [], 
+                "editable": true, 
+                "isAutoBuilder": "", 
+                "isDefault": "no", 
+                "isDraft": false, 
+                "key": "configlet_997_5525972816465276", 
+                "name": "SYS_TelemetryBuilderV3_172.24.0.2_1", 
+                "netElementCount": 0, 
+                "note": "", 
+                "reconciled": false, 
+                "sslConfig": false, 
+                "type": "Generated", 
+                "user": "cvpadmin", 
+                "visible": true
+            }, 
+            {
+                "config": "alias a440 show version\nalias a340 show versio", 
+                "containerCount": 0, 
+                "containers": [], 
+                "dateTimeInLongFormat": 1573646560592, 
+                "devices": [], 
+                "editable": true, 
+                "isAutoBuilder": "", 
+                "isDefault": "no", 
+                "isDraft": false, 
+                "key": "configlet_65_1220069422837515", 
+                "name": "another_configlet", 
+                "netElementCount": 0, 
+                "note": "## Managed by Ansible ##", 
+                "reconciled": false, 
+                "sslConfig": false, 
+                "type": "Static", 
+                "user": "cvpadmin", 
+                "visible": true
+            }, 
+            {
+                "config": "", 
+                "containerCount": 0, 
+                "containers": [], 
+                "dateTimeInLongFormat": 1573659377398, 
+                "devices": [], 
+                "editable": true, 
+                "isAutoBuilder": "true", 
+                "isDefault": "no", 
+                "isDraft": false, 
+                "key": "configletBuilderMapper_851_3809768620029224", 
+                "name": "asd", 
+                "netElementCount": 0, 
+                "note": "", 
+                "reconciled": false, 
+                "sslConfig": false, 
+                "type": "Builder", 
+                "user": "cvpadmin", 
+                "visible": true
+            }, 
+            {
+                "config": "alias a440 show version\nalias sh show version", 
+                "containerCount": 0, 
+                "containers": [], 
+                "dateTimeInLongFormat": 1573646591406, 
+                "devices": [], 
+                "editable": true, 
+                "isAutoBuilder": "", 
+                "isDefault": "no", 
+                "isDraft": false, 
+                "key": "configlet_12_1217158300139998", 
+                "name": "common_configlet", 
+                "netElementCount": 0, 
+                "note": "## Managed by Ansible ##", 
+                "reconciled": false, 
+                "sslConfig": false, 
+                "type": "Static", 
+                "user": "cvpadmin", 
+                "visible": true
+            }, 
+            {
+                "config": "! Command: show running-config\n! device: veos01 (vEOS, EOS-4.23.0F)\n!\n! boot system flash:/vEOS-lab.swi\n!\ndaemon TerminAttr\n   exec /usr/bin/TerminAttr -ingestgrpcurl=172.17.0.3:9910 -cvcompression=gzip -ingestauth=key, -smashexcludes=ale,flexCounter,hardware,kni,pulse,strata -ingestexclude=/Sysdb/cell/1/agent,/Sysdb/cell/2/agent -ingestvrf=default -taillogs\n   no shutdown\n!\ntransceiver qsfp default-mode 4x10G\n!\nhostname veos01\n!\nspanning-tree mode mstp\n!\nno aaa root\n!\nusername cvpadmin privilege 15 secret sha512 $6$GKVb8FCk1qg3dvmF$P0Z30uj/leqExNk83CVBg90R522VVks5tjDC2MNuemppHrnkChIJm0fF4tq1WPFlk7XeJzHe56Qlc5pM8IbFG.\n!\ninterface Loopback0\n   ip address 172.24.0.2/32\n!\ninterface Management1\n   ip address 10.0.0.15/24\n!\nip route 0.0.0.0/0 10.0.0.2\nip route 172.17.0.3/32 10.0.0.2\n!\nno ip routing\n!\nmanagement api http-commands\n   no shutdown\n!\nend", 
+                "containerCount": 0, 
+                "containers": [], 
+                "dateTimeInLongFormat": 1575380286344, 
+                "devices": [
+                    "veos01"
+                ], 
+                "editable": true, 
+                "isAutoBuilder": "", 
+                "isDefault": "no", 
+                "isDraft": false, 
+                "key": "configlet_229_1477061222749251", 
+                "name": "veos01-basic-configuration", 
+                "netElementCount": 1, 
+                "note": "", 
+                "reconciled": false, 
+                "sslConfig": false, 
+                "type": "Static", 
+                "user": "cvpadmin", 
+                "visible": true
+            }, 
+            {
+                "config": "! Command: show running-config\n! device: veos01 (vEOS, EOS-4.23.0F)\n!\n! boot system flash:/vEOS-lab.swi\n!\ndaemon TerminAttr\n   exec /usr/bin/TerminAttr -ingestgrpcurl=172.17.0.3:9910 -cvcompression=gzip -ingestauth=key, -smashexcludes=ale,flexCounter,hardware,kni,pulse,strata -ingestexclude=/Sysdb/cell/1/agent,/Sysdb/cell/2/agent -ingestvrf=default -taillogs\n   no shutdown\n!\ntransceiver qsfp default-mode 4x10G\n!\nhostname veos02\n!\nspanning-tree mode mstp\n!\nno aaa root\n!\nusername cvpadmin privilege 15 secret sha512 $6$GKVb8FCk1qg3dvmF$P0Z30uj/leqExNk83CVBg90R522VVks5tjDC2MNuemppHrnkChIJm0fF4tq1WPFlk7XeJzHe56Qlc5pM8IbFG.\n!\ninterface Loopback0\n   ip address 172.24.0.3/32\n!\ninterface Management1\n   ip address 10.0.0.15/24\n!\nip route 0.0.0.0/0 10.0.0.2\nip route 172.17.0.3/32 10.0.0.2\n!\nno ip routing\n!\nmanagement api http-commands\n   no shutdown\n!\nend", 
+                "containerCount": 0, 
+                "containers": [], 
+                "dateTimeInLongFormat": 1575380304481, 
+                "devices": [
+                    "veos02"
+                ], 
+                "editable": true, 
+                "isAutoBuilder": "", 
+                "isDefault": "no", 
+                "isDraft": false, 
+                "key": "configlet_230_1477092383663623", 
+                "name": "veos02-basic-configuration", 
+                "netElementCount": 1, 
+                "note": "", 
+                "reconciled": false, 
+                "sslConfig": false, 
+                "type": "Static", 
+                "user": "cvpadmin", 
+                "visible": true
+            }, 
+            {
+                "config": "! Command: show running-config\n! device: veos01 (vEOS, EOS-4.23.0F)\n!\n! boot system flash:/vEOS-lab.swi\n!\ndaemon TerminAttr\n   exec /usr/bin/TerminAttr -ingestgrpcurl=172.17.0.3:9910 -cvcompression=gzip -ingestauth=key, -smashexcludes=ale,flexCounter,hardware,kni,pulse,strata -ingestexclude=/Sysdb/cell/1/agent,/Sysdb/cell/2/agent -ingestvrf=default -taillogs\n   no shutdown\n!\ntransceiver qsfp default-mode 4x10G\n!\nhostname veos03\n!\nspanning-tree mode mstp\n!\nno aaa root\n!\nusername cvpadmin privilege 15 secret sha512 $6$GKVb8FCk1qg3dvmF$P0Z30uj/leqExNk83CVBg90R522VVks5tjDC2MNuemppHrnkChIJm0fF4tq1WPFlk7XeJzHe56Qlc5pM8IbFG.\n!\ninterface Loopback0\n   ip address 172.24.0.4/32\n!\ninterface Management1\n   ip address 10.0.0.15/24\n!\nip route 0.0.0.0/0 10.0.0.2\nip route 172.17.0.3/32 10.0.0.2\n!\nno ip routing\n!\nmanagement api http-commands\n   no shutdown\n!\nend", 
+                "containerCount": 0, 
+                "containers": [], 
+                "dateTimeInLongFormat": 1575380316285, 
+                "devices": [
+                    "veos03"
+                ], 
+                "editable": true, 
+                "isAutoBuilder": "", 
+                "isDefault": "no", 
+                "isDraft": false, 
+                "key": "configlet_231_1477120774568332", 
+                "name": "veos03-basic-configuration", 
+                "netElementCount": 1, 
+                "note": "", 
+                "reconciled": false, 
+                "sslConfig": false, 
+                "type": "Static", 
+                "user": "cvpadmin", 
+                "visible": true
+            }
+        ], 
+        "containers": [
+            {
+                "CreatedBy": "cvp system", 
+                "CreatedOn": 1569850167062, 
+                "Key": "root", 
+                "Mode": "expand", 
+                "Name": "Tenant", 
+                "childContainerId": null, 
+                "configlets": [], 
+                "devices": [], 
+                "factoryId": 1, 
+                "id": 21, 
+                "imageBundle": "", 
+                "key": "root", 
+                "name": "Tenant", 
+                "parentId": null, 
+                "parentName": null, 
+                "type": null, 
+                "userId": null
+            }, 
+            {
+                "CreatedBy": "cvpadmin", 
+                "CreatedOn": 1571330001843, 
+                "Key": "container_545_1480393148819697", 
+                "Mode": "expand", 
+                "Name": "staging", 
+                "childContainerId": null, 
+                "configlets": [], 
+                "devices": [], 
+                "factoryId": 1, 
+                "id": 21, 
+                "imageBundle": "", 
+                "key": "container_545_1480393148819697", 
+                "name": "staging", 
+                "parentId": "root", 
+                "parentName": "Tenant", 
+                "type": null, 
+                "userId": null
+            }, 
+            {
+                "CreatedBy": "cvp system", 
+                "CreatedOn": 1569850167083, 
+                "Key": "undefined_container", 
+                "Mode": "expand", 
+                "Name": "Undefined", 
+                "childContainerId": null, 
+                "configlets": [], 
+                "devices": [], 
+                "factoryId": 1, 
+                "id": 21, 
+                "imageBundle": "EOS-4.20.14M", 
+                "key": "undefined_container", 
+                "name": "Undefined", 
+                "parentId": "root", 
+                "parentName": "Tenant", 
+                "type": null, 
+                "userId": null
+            }, 
+            {
+                "CreatedBy": "cvpadmin", 
+                "CreatedOn": 1575664967411, 
+                "Key": "container_1495_5815358716185509", 
+                "Mode": "expand", 
+                "Name": "Fabric", 
+                "childContainerId": null, 
+                "configlets": [
+                    "ANSIBLE_TESTING_CONTAINER"
+                ], 
+                "devices": [], 
+                "factoryId": 1, 
+                "id": 21, 
+                "imageBundle": "", 
+                "key": "container_1495_5815358716185509", 
+                "name": "Fabric", 
+                "parentId": "root", 
+                "parentName": "Tenant", 
+                "type": null, 
+                "userId": null
+            }, 
+            {
+                "CreatedBy": "cvpadmin", 
+                "CreatedOn": 1575664969996, 
+                "Key": "container_1497_5815361301286722", 
+                "Mode": "expand", 
+                "Name": "Leaves", 
+                "childContainerId": null, 
+                "configlets": [
+                    "ANSIBLE_TESTING_CONTAINER"
+                ], 
+                "devices": [], 
+                "factoryId": 1, 
+                "id": 21, 
+                "imageBundle": "", 
+                "key": "container_1497_5815361301286722", 
+                "name": "Leaves", 
+                "parentId": "container_1495_5815358716185509", 
+                "parentName": "Fabric", 
+                "type": null, 
+                "userId": null
+            }, 
+            {
+                "CreatedBy": "cvpadmin", 
+                "CreatedOn": 1575664973211, 
+                "Key": "container_1499_5815364517092741", 
+                "Mode": "expand", 
+                "Name": "MLAG01", 
+                "childContainerId": null, 
+                "configlets": [], 
+                "devices": [
+                    "veos01", 
+                    "veos02"
+                ], 
+                "factoryId": 1, 
+                "id": 21, 
+                "imageBundle": "", 
+                "key": "container_1499_5815364517092741", 
+                "name": "MLAG01", 
+                "parentId": "container_1497_5815361301286722", 
+                "parentName": "Leaves", 
+                "type": null, 
+                "userId": null
+            }, 
+            {
+                "CreatedBy": "cvpadmin", 
+                "CreatedOn": 1575664976829, 
+                "Key": "container_1501_5815368134649780", 
+                "Mode": "expand", 
+                "Name": "Spines", 
+                "childContainerId": null, 
+                "configlets": [], 
+                "devices": [
+                    "veos03"
+                ], 
+                "factoryId": 1, 
+                "id": 21, 
+                "imageBundle": "", 
+                "key": "container_1501_5815368134649780", 
+                "name": "Spines", 
+                "parentId": "container_1495_5815358716185509", 
+                "parentName": "Fabric", 
+                "type": null, 
+                "userId": null
+            }
+        ], 
+        "cvp_info": {
+            "version": "2019.1.0"
+        }, 
+        "devices": [
+            {
+                "architecture": "", 
+                "bootupTimeStamp": 1575379406.137418, 
+                "bootupTimestamp": 1575379406.137418, 
+                "complianceCode": "0000", 
+                "complianceIndication": "", 
+                "containerName": "MLAG01", 
+                "danzEnabled": false, 
+                "dcaKey": null, 
+                "deviceInfo": "Registered", 
+                "deviceSpecificConfiglets": [
+                    "veos01-basic-configuration", 
+                    "ANSIBLE_TESTING_VEOS"
+                ], 
+                "deviceStatus": "Registered", 
+                "domainName": "", 
+                "fqdn": "veos01", 
+                "hardwareRevision": "", 
+                "hostname": "veos01", 
+                "imageBundle": "", 
+                "internalBuild": "bf140e5e-dc9b-4586-9c8e-9615c43ed837", 
+                "internalBuildId": "bf140e5e-dc9b-4586-9c8e-9615c43ed837", 
+                "internalVersion": "4.23.0F", 
+                "ipAddress": "172.24.0.2", 
+                "isDANZEnabled": false, 
+                "isMLAGEnabled": false, 
+                "key": "50:5d:9e:7a:dc:1a", 
+                "lastSyncUp": 0, 
+                "memFree": 0, 
+                "memTotal": 0, 
+                "mlagEnabled": false, 
+                "modelName": "vEOS", 
+                "parentContainerId": "container_1499_5815364517092741", 
+                "parentContainerKey": "container_1499_5815364517092741", 
+                "parentContainerName": "MLAG01", 
+                "serialNumber": "6F59CE4C61490065519A0C755E1AB5F4", 
+                "sslConfigAvailable": false, 
+                "sslEnabledByCVP": false, 
+                "status": "Registered", 
+                "streamingStatus": "active", 
+                "systemMacAddress": "50:5d:9e:7a:dc:1a", 
+                "taskIdList": [], 
+                "tempAction": null, 
+                "type": "netelement", 
+                "unAuthorized": false, 
+                "version": "4.23.0F", 
+                "ztpMode": false
+            }, 
+            {
+                "architecture": "", 
+                "bootupTimeStamp": 1575378884.2171059, 
+                "bootupTimestamp": 1575378884.2171059, 
+                "complianceCode": "0000", 
+                "complianceIndication": "", 
+                "containerName": "MLAG01", 
+                "danzEnabled": false, 
+                "dcaKey": null, 
+                "deviceInfo": "Registered", 
+                "deviceSpecificConfiglets": [
+                    "veos02-basic-configuration", 
+                    "ANSIBLE_TESTING_VEOS"
+                ], 
+                "deviceStatus": "Registered", 
+                "domainName": "", 
+                "fqdn": "veos02", 
+                "hardwareRevision": "", 
+                "hostname": "veos02", 
+                "imageBundle": "", 
+                "internalBuild": "bf140e5e-dc9b-4586-9c8e-9615c43ed837", 
+                "internalBuildId": "bf140e5e-dc9b-4586-9c8e-9615c43ed837", 
+                "internalVersion": "4.23.0F", 
+                "ipAddress": "172.24.0.3", 
+                "isDANZEnabled": false, 
+                "isMLAGEnabled": false, 
+                "key": "50:5d:9e:7a:dc:2a", 
+                "lastSyncUp": 0, 
+                "memFree": 0, 
+                "memTotal": 0, 
+                "mlagEnabled": false, 
+                "modelName": "vEOS", 
+                "parentContainerId": "container_1499_5815364517092741", 
+                "parentContainerKey": "container_1499_5815364517092741", 
+                "parentContainerName": "MLAG01", 
+                "serialNumber": "CC1C6E32720D1FDADC971D3CC8640434", 
+                "sslConfigAvailable": false, 
+                "sslEnabledByCVP": false, 
+                "status": "Registered", 
+                "streamingStatus": "active", 
+                "systemMacAddress": "50:5d:9e:7a:dc:2a", 
+                "taskIdList": [], 
+                "tempAction": null, 
+                "type": "netelement", 
+                "unAuthorized": false, 
+                "version": "4.23.0F", 
+                "ztpMode": false
+            }, 
+            {
+                "architecture": "", 
+                "bootupTimeStamp": 1575379761.3345542, 
+                "bootupTimestamp": 1575379761.3345542, 
+                "complianceCode": "0000", 
+                "complianceIndication": "", 
+                "containerName": "Spines", 
+                "danzEnabled": false, 
+                "dcaKey": null, 
+                "deviceInfo": "Registered", 
+                "deviceSpecificConfiglets": [
+                    "veos03-basic-configuration"
+                ], 
+                "deviceStatus": "Registered", 
+                "domainName": "", 
+                "fqdn": "veos03", 
+                "hardwareRevision": "", 
+                "hostname": "veos03", 
+                "imageBundle": "", 
+                "internalBuild": "bf140e5e-dc9b-4586-9c8e-9615c43ed837", 
+                "internalBuildId": "bf140e5e-dc9b-4586-9c8e-9615c43ed837", 
+                "internalVersion": "4.23.0F", 
+                "ipAddress": "172.24.0.4", 
+                "isDANZEnabled": false, 
+                "isMLAGEnabled": false, 
+                "key": "50:5d:9e:7a:dc:3a", 
+                "lastSyncUp": 0, 
+                "memFree": 0, 
+                "memTotal": 0, 
+                "mlagEnabled": false, 
+                "modelName": "vEOS", 
+                "parentContainerId": "container_1501_5815368134649780", 
+                "parentContainerKey": "container_1501_5815368134649780", 
+                "parentContainerName": "Spines", 
+                "serialNumber": "953C7F1E670A4DCEA399A6F4E30B4CFF", 
+                "sslConfigAvailable": false, 
+                "sslEnabledByCVP": false, 
+                "status": "Registered", 
+                "streamingStatus": "active", 
+                "systemMacAddress": "50:5d:9e:7a:dc:3a", 
+                "taskIdList": [], 
+                "tempAction": null, 
+                "type": "netelement", 
+                "unAuthorized": false, 
+                "version": "4.23.0F", 
+                "ztpMode": false
+            }
+        ], 
+        "tasks": [
+            [
+                {
+                    "ccId": "", 
+                    "ccIdV2": "", 
+                    "completedOnInLongFormat": 1575665016286, 
+                    "createdBy": "cvpadmin", 
+                    "createdOnInLongFormat": 1575665011138, 
+                    "currentTaskName": "Submit", 
+                    "currentTaskType": "User Task", 
+                    "data": {
+                        "APP_SESSION_ID": "", 
+                        "ERROR_IN_CAPTURING_DESIGN_CONFIG": "", 
+                        "ERROR_IN_CAPTURING_RUNNING_CONFIG": "", 
+                        "INCORRECT_CONFIG_IN_CAPTURING_DESIGN_CONFIG": "", 
+                        "INCORRECT_CONFIG_IN_CAPTURING_DESIGN_CONFIG_OUTPUT_INDEX": "", 
+                        "IS_ADD_OR_MOVE_FLOW": true, 
+                        "IS_AUTO_GENERATED_IN_CVP": false, 
+                        "IS_CONFIG_PUSH_NEEDED": "yes", 
+                        "NETELEMENT_ID": "50:5d:9e:7a:dc:3a", 
+                        "VIEW": "CONFIG", 
+                        "WORKFLOW_ACTION": "Configlet Push", 
+                        "ZERO_TOUCH_REPLACEMENT": "", 
+                        "ccExecutingNode": "", 
+                        "ccId": "", 
+                        "commandUsedInMgmtIpVal": "", 
+                        "config": [], 
+                        "configExistInCVP": false, 
+                        "configSnapshots": [], 
+                        "configletList": [], 
+                        "currentparentContainerId": "container_545_1480393148819697", 
+                        "designedConfig": "", 
+                        "designedConfigOutputIndex": "", 
+                        "extensionsRequireReboot": [], 
+                        "ignoreConfigletList": [], 
+                        "image": "", 
+                        "imageBundleId": "", 
+                        "imageId": [], 
+                        "imageIdList": [], 
+                        "imageToBePushedToDevice": "", 
+                        "isDCAEnabled": false, 
+                        "isRollbackFromSnapshotFlow": false, 
+                        "isRollbackTask": false, 
+                        "newparentContainerId": "container_1501_5815368134649780", 
+                        "noOfRe-Tries": 0, 
+                        "preRollbackImage": "", 
+                        "presentImageInDevice": "", 
+                        "runningConfig": "", 
+                        "sessionUsedInMgmtIpVal": "", 
+                        "targetIpAddress": "", 
+                        "user": ""
+                    }, 
+                    "description": "Configlet Assign from Container Move: veos03", 
+                    "dualSupervisor": false, 
+                    "executedBy": "", 
+                    "executedOnInLongFormat": 0, 
+                    "name": "", 
+                    "netElementId": "50:5d:9e:7a:dc:3a", 
+                    "newParentContainerId": "container_1501_5815368134649780", 
+                    "newParentContainerName": "Spines", 
+                    "note": "Executed by Ansible", 
+                    "stageId": "", 
+                    "taskStatus": "ACTIVE", 
+                    "taskStatusBeforeCancel": "", 
+                    "templateId": "ztp", 
+                    "workFlowDetailsId": "", 
+                    "workOrderDetails": {
+                        "ipAddress": "172.24.0.4", 
+                        "netElementHostName": "veos03", 
+                        "netElementId": "50:5d:9e:7a:dc:3a", 
+                        "serialNumber": "953C7F1E670A4DCEA399A6F4E30B4CFF", 
+                        "workOrderDetailsId": "", 
+                        "workOrderId": ""
+                    }, 
+                    "workOrderId": "203", 
+                    "workOrderState": "ACTIVE", 
+                    "workOrderUserDefinedStatus": "Pending"
+                }
+            ]
+        ]
+    }, 
+    "changed": false, 
+    "invocation": {
+        "module_args": {
+            "facts": [
+                "all"
+            ], 
+            "gather_subset": [
+                "default"
+            ]
+        }
+    }
+}
+
+TASK [#02 - Configure devices on cvp_2019] **********************************************************************************************************************************************************************
+task path: /Users/tgrimonet/Projects/ansible-devel/github/aristanetworks/upstream-ansible-cvp/ansible_collections/arista/cvp/tests/playbook.reset.topology.yml:49
+Saturday 07 December 2019  12:30:57 +0100 (0:00:27.208)       0:00:27.260 ***** 
+<10.90.224.122> attempting to start connection
+<10.90.224.122> using connection plugin httpapi
+<10.90.224.122> found existing local domain socket, using it!
+<10.90.224.122> updating play_context for connection
+<10.90.224.122> 
+<10.90.224.122> local domain socket path is /Users/tgrimonet/.ansible/pc/778ab219f3
+<10.90.224.122> ESTABLISH LOCAL CONNECTION FOR USER: tgrimonet
+<10.90.224.122> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/tgrimonet/.ansible/tmp/ansible-local-16979YcJaZM/ansible-tmp-1575718258.87-83850111967733 `" && echo ansible-tmp-1575718258.87-83850111967733="` echo /Users/tgrimonet/.ansible/tmp/ansible-local-16979YcJaZM/ansible-tmp-1575718258.87-83850111967733 `" ) && sleep 0'
+Using module_utils file ansible_collections/arista
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/connection.py
+Using module_utils file ansible_collections/arista/cvp/plugins/module_utils/cv_client
+Using module_utils file ansible_collections/arista/cvp/plugins/module_utils/cv_client_errors
+Using module_utils file ansible_collections/arista/cvp
+Using module_utils file ansible_collections
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/basic.py
+Using module_utils file ansible_collections/arista/cvp/plugins/module_utils
+Using module_utils file ansible_collections/arista/cvp/plugins
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/_text.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/common/json.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/six/__init__.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/common/__init__.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/common/_collections_compat.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/common/collections.py
+Using module_utils file ansible_collections/arista/cvp/plugins/module_utils/cv_api2019
+Using module_utils file ansible_collections/arista/cvp/plugins/module_utils/cv_api2018
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/common/text/formatters.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/common/validation.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/common/text/converters.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/pycompat24.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/common/text/__init__.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/common/process.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/parsing/convert_bool.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/common/_utils.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/common/parameters.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/parsing/__init__.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/common/_json_compat.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/common/sys_info.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/common/file.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/distro/__init__.py
+Using module_utils file /Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/ansible/module_utils/distro/_distro.py
+Using module file /Users/tgrimonet/Projects/ansible-devel/github/aristanetworks/upstream-ansible-cvp/ansible_collections/arista/cvp/plugins/modules/cv_device.py
+<10.90.224.122> PUT /Users/tgrimonet/.ansible/tmp/ansible-local-16979YcJaZM/tmpxtjCDK TO /Users/tgrimonet/.ansible/tmp/ansible-local-16979YcJaZM/ansible-tmp-1575718258.87-83850111967733/AnsiballZ_cv_device.py
+<10.90.224.122> EXEC /bin/sh -c 'chmod u+x /Users/tgrimonet/.ansible/tmp/ansible-local-16979YcJaZM/ansible-tmp-1575718258.87-83850111967733/ /Users/tgrimonet/.ansible/tmp/ansible-local-16979YcJaZM/ansible-tmp-1575718258.87-83850111967733/AnsiballZ_cv_device.py && sleep 0'
+<10.90.224.122> EXEC /bin/sh -c '$(which python) /Users/tgrimonet/.ansible/tmp/ansible-local-16979YcJaZM/ansible-tmp-1575718258.87-83850111967733/AnsiballZ_cv_device.py && sleep 0'
+<10.90.224.122> EXEC /bin/sh -c 'rm -f -r /Users/tgrimonet/.ansible/tmp/ansible-local-16979YcJaZM/ansible-tmp-1575718258.87-83850111967733/ > /dev/null 2>&1 && sleep 0'
+fatal: [cvp_2019]: FAILED! => {
+    "changed": false, 
+    "module_stderr": "/Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/urllib3/connectionpool.py:851: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings\n  InsecureRequestWarning)\n/Users/tgrimonet/.venv/venv2.7-cvp-ansible/lib/python2.7/site-packages/urllib3/connectionpool.py:851: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings\n  InsecureRequestWarning)\nTraceback (most recent call last):\n  File \"/Users/tgrimonet/.ansible/tmp/ansible-local-16979YcJaZM/ansible-tmp-1575718258.87-83850111967733/AnsiballZ_cv_device.py\", line 102, in <module>\n    _ansiballz_main()\n  File \"/Users/tgrimonet/.ansible/tmp/ansible-local-16979YcJaZM/ansible-tmp-1575718258.87-83850111967733/AnsiballZ_cv_device.py\", line 94, in _ansiballz_main\n    invoke_module(zipped_mod, temp_path, ANSIBALLZ_PARAMS)\n  File \"/Users/tgrimonet/.ansible/tmp/ansible-local-16979YcJaZM/ansible-tmp-1575718258.87-83850111967733/AnsiballZ_cv_device.py\", line 40, in invoke_module\n    runpy.run_module(mod_name='ansible_collections.arista.cvp.plugins.modules.cv_device', init_globals=None, run_name='__main__', alter_sys=True)\n  File \"/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/runpy.py\", line 188, in run_module\n    fname, loader, pkg_name)\n  File \"/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/runpy.py\", line 82, in _run_module_code\n    mod_name, mod_fname, mod_loader, pkg_name)\n  File \"/usr/local/Cellar/python@2/2.7.16/Frameworks/Python.framework/Versions/2.7/lib/python2.7/runpy.py\", line 72, in _run_code\n    exec code in run_globals\n  File \"/var/folders/bj/x0pdlg4s46vbk9t8916xkfb00000gn/T/ansible_cv_device_payload_z4yHmy/ansible_cv_device_payload.zip/ansible_collections/arista/cvp/plugins/modules/cv_device.py\", line 594, in <module>\n  File \"/var/folders/bj/x0pdlg4s46vbk9t8916xkfb00000gn/T/ansible_cv_device_payload_z4yHmy/ansible_cv_device_payload.zip/ansible_collections/arista/cvp/plugins/modules/cv_device.py\", line 584, in main\n  File \"/var/folders/bj/x0pdlg4s46vbk9t8916xkfb00000gn/T/ansible_cv_device_payload_z4yHmy/ansible_cv_device_payload.zip/ansible_collections/arista/cvp/plugins/modules/cv_device.py\", line 169, in device_action\n  File \"/var/folders/bj/x0pdlg4s46vbk9t8916xkfb00000gn/T/ansible_cv_device_payload_z4yHmy/ansible_cv_device_payload.zip/ansible_collections/arista/cvp/plugins/modules/cv_device.py\", line 169, in <genexpr>\nKeyError: 'name'\n", 
+    "module_stdout": "", 
+    "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", 
+    "rc": 1
+}
+
+PLAY RECAP ******************************************************************************************************************************************************************************************************
+cvp_2019                   : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+Saturday 07 December 2019  12:31:00 +0100 (0:00:02.375)       0:00:29.635 ***** 
+=============================================================================== 
+#01 - Collect initial facts from cvp_2019 --------------------------------------------------------------------------------------------------------------------------------------------------------------- 27.21s
+/Users/tgrimonet/Projects/ansible-devel/github/aristanetworks/upstream-ansible-cvp/ansible_collections/arista/cvp/tests/playbook.reset.topology.yml:42 ---------------------------------------------------------
+#02 - Configure devices on cvp_2019 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- 2.38s
+/Users/tgrimonet/Projects/ansible-devel/github/aristanetworks/upstream-ansible-cvp/ansible_collections/arista/cvp/tests/playbook.reset.topology.yml:49 ---------------------------------------------------------

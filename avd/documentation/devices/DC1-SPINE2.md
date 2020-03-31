@@ -126,7 +126,6 @@ No VLANs defined
 ### VRF Instances Device Configuration
 
 ```eos
-  
 ```
 
 ## BFD Multihop Interval

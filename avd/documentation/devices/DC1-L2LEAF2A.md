@@ -168,7 +168,6 @@ vlan 131
 ### VRF Instances Device Configuration
 
 ```eos
-  
 ```
 
 ## BFD Multihop Interval
