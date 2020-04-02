@@ -10,6 +10,8 @@
       eos_config:
         lines:
         - hostname {{ inventory_hostname }}
+        - ntp server 10.33.5.161
+        - schedule tech-support interval 1440 max-log-files 10 command show tech-support
         - no dns domain
 #- name: cv init
 #  hosts: cv_server
